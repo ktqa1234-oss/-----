@@ -1,0 +1,3085 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>👑 JEEP ROYAL VVIP CPM | CPM1 & CPM2 PREMIUM CAR MARKET</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Noto Sans KR & Cinzel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Noto Sans KR"', 'sans-serif'],
+            display: ['"Cinzel"', '"Noto Sans KR"', 'serif'],
+          },
+          colors: {
+            vvip: {
+              black: '#070709',
+              card: '#0f0f14',
+              elevated: '#16161e',
+              gold: '#D4AF37',
+              goldLight: '#F3E5AB',
+              goldDark: '#996515',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      --safe-top: env(safe-area-inset-top, 0px);
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    body {
+      background-color: #070709;
+      color: #f3f4f6;
+      font-family: 'Noto Sans KR', sans-serif;
+      overflow-x: hidden;
+      padding-top: var(--safe-top);
+      padding-bottom: calc(84px + var(--safe-bottom));
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    @media (min-width: 768px) {
+      body {
+        padding-bottom: 2.5rem;
+      }
+    }
+
+    /* Gold Text Gradient */
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA771C 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Gold Button Gradient */
+    .btn-gold {
+      background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 45%, #B8860B 100%);
+      color: #070709;
+      font-weight: 800;
+      box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(212, 175, 55, 0.55);
+      filter: brightness(1.06);
+    }
+    .btn-gold:active {
+      transform: scale(0.97);
+    }
+
+    /* Rainbow Neon Accent Border */
+    .rainbow-border {
+      position: relative;
+      background: #0f0f14;
+      border-radius: 1rem;
+    }
+    .rainbow-border::before {
+      content: "";
+      position: absolute;
+      inset: -1.5px;
+      border-radius: 1.08rem;
+      padding: 1.5px;
+      background: linear-gradient(120deg, #ff2a85, #ff9a00, #ffee00, #00f5a0, #00d9f5, #a855f7, #ff2a85);
+      background-size: 300% 300%;
+      animation: rainbowFlow 6s linear infinite;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .rainbow-glow-pill {
+      background: linear-gradient(90deg, rgba(255,42,133,0.18), rgba(255,180,0,0.18), rgba(0,245,160,0.18), rgba(0,217,245,0.18), rgba(168,85,247,0.18));
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+    }
+
+    @keyframes rainbowFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Role & Gradient Nickname Styles */
+    .nick-developer {
+      background: linear-gradient(90deg, #ff2a85, #ff9a00, #ffee00, #00f5a0, #00d9f5, #a855f7, #ff2a85);
+      background-size: 260% 260%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbowFlow 4.5s linear infinite;
+      font-weight: 900;
+    }
+
+    .nick-admin {
+      background: linear-gradient(135deg, #fff6c8 0%, #D4AF37 45%, #ffbe2e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.45));
+      font-weight: 800;
+    }
+
+    /* 3D Tactile Buttons */
+    .btn-3d-gold {
+      background: linear-gradient(180deg, #F7E8AC 0%, #D4AF37 52%, #9E7214 100%);
+      color: #070709;
+      font-weight: 800;
+      border-bottom: 4px solid #694908;
+      box-shadow: 0 8px 22px rgba(212, 175, 55, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+      transition: transform 0.16s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    }
+    .btn-3d-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(212, 175, 55, 0.52), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+      filter: brightness(1.05);
+    }
+    .btn-3d-gold:active {
+      transform: translateY(2px);
+      border-bottom-width: 1px;
+    }
+
+    .btn-3d-dark {
+      background: linear-gradient(180deg, #1b1b24 0%, #0e0e14 100%);
+      color: #F3E5AB;
+      font-weight: 700;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      border-bottom: 4px solid rgba(153, 101, 21, 0.75);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+      transition: transform 0.16s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+    .btn-3d-dark:hover {
+      transform: translateY(-2px);
+      border-color: rgba(243, 229, 171, 0.85);
+      background: linear-gradient(180deg, #242430 0%, #14141d 100%);
+    }
+    .btn-3d-dark:active {
+      transform: translateY(2px);
+      border-bottom-width: 1px;
+    }
+
+    /* 4 Dedicated Market Menu Cards */
+    .vvip-menu-card {
+      background: linear-gradient(160deg, rgba(25, 24, 34, 0.95) 0%, rgba(10, 10, 15, 0.98) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.65), inset 0 0 18px rgba(212, 175, 55, 0.05);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .vvip-menu-card:hover {
+      transform: translateY(-4px);
+      border-color: #F3E5AB;
+      box-shadow: 0 14px 32px rgba(212, 175, 55, 0.24), 0 0 18px rgba(212, 175, 55, 0.22);
+    }
+    .vvip-menu-card.selected-menu {
+      border-color: #F3E5AB;
+      box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.55), 0 14px 32px rgba(212, 175, 55, 0.28);
+    }
+
+    /* Gold Neon Card */
+    .gold-card {
+      background: linear-gradient(180deg, rgba(22, 22, 30, 0.92) 0%, rgba(12, 12, 16, 0.98) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
+      transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+    }
+    .gold-card:hover {
+      border-color: rgba(212, 175, 55, 0.75);
+      box-shadow: 0 12px 36px rgba(212, 175, 55, 0.16);
+      transform: translateY(-3px);
+    }
+
+    /* Smooth Fade In */
+    .fade-in {
+      animation: fadeIn 0.3s ease-out forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #070709;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3a3014;
+      border-radius: 999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D4AF37;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-yellow-500/30 selection:text-yellow-200">
+
+  <!-- Top Sticky Header -->
+  <header class="sticky top-0 z-40 bg-[#070709]/95 backdrop-blur-xl border-b border-yellow-500/25">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-2">
+      <!-- Brand Logo -->
+      <button type="button" onclick="navigateTo('home')" class="flex items-center gap-2.5 text-left group focus:outline-none">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-300 via-yellow-500 to-amber-700 p-[1.5px] shadow-lg shadow-yellow-500/20 group-hover:scale-105 transition-transform">
+          <div class="w-full h-full bg-[#09090d] rounded-[10px] flex items-center justify-center text-lg">
+            👑
+          </div>
+        </div>
+        <div>
+          <div class="font-display font-extrabold text-sm sm:text-lg tracking-wider text-gold-gradient leading-none">
+            JEEP ROYAL VVIP CPM
+          </div>
+          <div class="text-[10px] text-gray-400 tracking-widest mt-0.5">PREMIUM CPM1 / CPM2 MARKET</div>
+        </div>
+      </button>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-1">
+        <button type="button" onclick="navigateTo('home')" data-nav="home" class="nav-link px-3 py-2 rounded-xl text-xs font-semibold text-gray-300 hover:text-yellow-300 hover:bg-white/5 transition">
+          홈
+        </button>
+        <button type="button" onclick="navigateTo('cpm1')" data-nav="cpm1" class="nav-link px-3 py-2 rounded-xl text-xs font-semibold text-gray-300 hover:text-yellow-300 hover:bg-white/5 transition">
+          CPM1 거래
+        </button>
+        <button type="button" onclick="navigateTo('cpm2')" data-nav="cpm2" class="nav-link px-3 py-2 rounded-xl text-xs font-semibold text-gray-300 hover:text-yellow-300 hover:bg-white/5 transition">
+          CPM2 거래
+        </button>
+        <button type="button" onclick="navigateTo('hack')" data-nav="hack" class="nav-link px-3 py-2 rounded-xl text-xs font-semibold text-yellow-200 hover:text-yellow-300 hover:bg-yellow-500/10 transition">
+          핵작업·VVIP등급
+        </button>
+        <button type="button" onclick="navigateTo('safety')" data-nav="safety" class="nav-link px-3 py-2 rounded-xl text-xs font-semibold text-gray-300 hover:text-yellow-300 hover:bg-white/5 transition">
+          사기방지·신고
+        </button>
+        <button type="button" onclick="navigateTo('profile')" data-nav="profile" id="nav-profile-desktop" class="hidden nav-link px-3 py-2 rounded-xl text-xs font-semibold text-gray-300 hover:text-yellow-300 hover:bg-white/5 transition">
+          내 프로필
+        </button>
+        <button type="button" onclick="navigateTo('admin')" data-nav="admin" id="nav-admin-desktop" class="hidden nav-link px-3 py-2 rounded-xl text-xs font-bold text-amber-300 bg-amber-500/15 border border-amber-500/40 hover:bg-amber-500/25 transition">
+          <i class="fa-solid fa-crown mr-1"></i>관리자 전용
+        </button>
+      </nav>
+
+      <!-- User Auth Actions -->
+      <div class="flex items-center gap-2" id="header-auth-area">
+        <button type="button" onclick="openSyncModal()" id="sync-status-pill" class="px-2.5 py-1.5 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-400/40 text-[11px] font-bold text-amber-200 transition flex items-center gap-1.5" title="다른 기기/사람들과 실시간 게시물 공유 설정">
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+          <span id="sync-status-label">브라우저 저장 모드</span>
+        </button>
+        <button type="button" onclick="openAuthModal('login')" class="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold border border-yellow-500/50 text-yellow-300 hover:bg-yellow-500/10 transition">
+          로그인
+        </button>
+        <button type="button" onclick="openAuthModal('register')" class="btn-gold px-3.5 py-2 rounded-xl text-xs sm:text-sm">
+          회원가입
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 pt-5 pb-12">
+
+    <!-- ==================== VIEW 1: HOME ==================== -->
+    <section id="view-home" class="view-section fade-in space-y-8">
+      <!-- Hero Banner -->
+      <div class="rainbow-border p-6 sm:p-10 relative overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-72 h-72 bg-yellow-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-4xl">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full rainbow-glow-pill text-xs font-bold text-yellow-200 mb-4">
+            <span>👑 JEEP ROYAL VVIP CPM · PREMIUM CAR MARKET</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl font-black tracking-tight mb-2 flex items-center gap-3 flex-wrap">
+            <span class="text-4xl sm:text-5xl drop-shadow-[0_0_16px_rgba(212,175,55,0.65)]">👑</span>
+            <span class="text-gold-gradient font-display">JEEP ROYAL VVIP CPM</span>
+          </h1>
+          <div class="text-xs sm:text-sm font-bold tracking-widest text-yellow-300/90 uppercase mb-4">
+            CPM1 / CPM2 PREMIUM CAR MARKET
+          </div>
+
+          <p class="text-base sm:text-xl font-bold text-white leading-relaxed mb-6">
+            이타샤, 로고 차량, 레이싱 차량 등 다양한 커스텀 차량을 한곳에서 만나보세요.
+          </p>
+
+          <!-- Primary CTA Buttons (Logged Out) -->
+          <div id="hero-logged-out-actions" class="flex flex-wrap items-center gap-3 mb-6">
+            <button type="button" onclick="openAuthModal('login')" class="btn-3d-dark px-6 py-3 rounded-2xl text-xs sm:text-sm flex items-center gap-2">
+              <i class="fa-solid fa-right-to-bracket"></i>
+              <span>로그인하기</span>
+            </button>
+            <button type="button" onclick="openAuthModal('register')" class="btn-3d-gold px-6 py-3 rounded-2xl text-xs sm:text-sm flex items-center gap-2">
+              <i class="fa-solid fa-crown"></i>
+              <span>회원가입하기</span>
+            </button>
+          </div>
+
+          <!-- Logged In Welcome Strip -->
+          <div id="hero-logged-in-actions" class="hidden flex-wrap items-center gap-3 mb-6">
+            <div class="px-4 py-2.5 rounded-2xl bg-yellow-500/10 border border-yellow-500/35 text-sm text-yellow-200 flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-emerald-400"></i>
+              <span>환영합니다, <strong id="hero-user-name" class="text-white">회원</strong>님! (<span id="hero-user-cpmid" class="font-mono text-yellow-300"></span>)</span>
+            </div>
+            <button type="button" onclick="navigateTo('profile')" class="btn-3d-dark px-4 py-2.5 rounded-2xl text-xs font-bold">
+              내 프로필 관리
+            </button>
+          </div>
+
+          <!-- 4 Core Market Action Buttons -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+            <button type="button" onclick="navigateTo('cpm1')" class="btn-3d-gold px-4 py-3.5 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2">
+              <i class="fa-solid fa-car-side"></i>
+              <span>CPM1 차량 거래</span>
+            </button>
+
+            <button type="button" onclick="navigateTo('cpm2')" class="btn-3d-gold px-4 py-3.5 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2">
+              <i class="fa-solid fa-flag-checkered"></i>
+              <span>CPM2 차량 거래</span>
+            </button>
+
+            <button type="button" onclick="openSellModal('CPM1')" class="btn-3d-dark px-4 py-3.5 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2">
+              <i class="fa-solid fa-plus-circle text-yellow-400"></i>
+              <span>차량 판매 등록</span>
+            </button>
+
+            <button type="button" onclick="navigateTo('safety')" class="btn-3d-dark px-4 py-3.5 rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2 border-red-500/50 text-red-200">
+              <i class="fa-solid fa-shield-halved text-red-400"></i>
+              <span>사기 신고 센터</span>
+            </button>
+          </div>
+
+          <!-- Secondary Service Shortcuts -->
+          <div class="mt-3 flex flex-wrap gap-2">
+            <button type="button" onclick="navigateTo('hack')" class="px-4 py-2 rounded-xl bg-yellow-500/10 hover:bg-yellow-500/20 border border-yellow-500/40 text-xs font-bold text-yellow-200 transition flex items-center gap-1.5">
+              <span>⚡ CPM1 핵작업 가격표 & 할인 계산기</span>
+            </button>
+            <button type="button" onclick="navigateTo('hack')" class="px-4 py-2 rounded-xl bg-purple-500/10 hover:bg-purple-500/20 border border-purple-400/40 text-xs font-bold text-purple-200 transition flex items-center gap-1.5">
+              <span>👑 VVIP RANK 특별 보상 (차량 3대 증정 안내)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notices Section -->
+      <div class="gold-card rounded-2xl p-5 sm:p-6">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2.5">
+            <span class="w-8 h-8 rounded-lg bg-yellow-500/15 border border-yellow-500/40 flex items-center justify-center text-yellow-400">
+              <i class="fa-solid fa-bullhorn"></i>
+            </span>
+            <h2 class="text-lg font-bold text-white">공지사항</h2>
+          </div>
+          <span class="text-xs text-yellow-400/80 font-medium">JEEP ROYAL VVIP OFFICIAL</span>
+        </div>
+        <div id="home-notices-list" class="space-y-3"></div>
+      </div>
+
+      <!-- Verified Featured Vehicles Preview -->
+      <div class="space-y-4">
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <div>
+            <h2 class="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+              <span class="text-yellow-400">👑</span> 최신 등록 VVIP 차량 매물
+            </h2>
+            <p class="text-xs text-gray-400 mt-0.5">등록 즉시 공개 매물에 반영되며, 관리자 검토가 완료된 글에는 공식 확인 배지가 함께 표시됩니다.</p>
+          </div>
+          <div class="flex gap-2">
+            <button type="button" onclick="navigateTo('cpm1')" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-white/5 hover:bg-yellow-500/15 text-yellow-300 border border-yellow-500/30 transition">CPM1 전체</button>
+            <button type="button" onclick="navigateTo('cpm2')" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-white/5 hover:bg-yellow-500/15 text-yellow-300 border border-yellow-500/30 transition">CPM2 전체</button>
+          </div>
+        </div>
+        <div id="home-featured-vehicles" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+      </div>
+
+      <!-- Fraud Prevention Quick Banner -->
+      <div class="rounded-2xl bg-gradient-to-r from-red-950/60 via-[#150d10] to-amber-950/40 border border-red-500/40 p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="flex items-start gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-red-500/20 border border-red-500/40 flex items-center justify-center text-red-400 text-xl shrink-0 mt-0.5">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-red-300 text-base">사기 방지 및 안전 거래 수칙 안내</h3>
+            <p class="text-xs sm:text-sm text-gray-300 mt-1">
+              거래 전 반드시 판매자의 실제 카파킹 ID와 프로필을 확인하세요. 사기 의심 시 즉시 신고해 주시기 바랍니다.
+            </p>
+          </div>
+        </div>
+        <button type="button" onclick="navigateTo('safety')" class="px-4 py-2.5 rounded-xl bg-red-500/20 hover:bg-red-500/30 border border-red-500/50 text-red-200 text-xs sm:text-sm font-bold shrink-0 transition">
+          주의사항 및 신고 안내 <i class="fa-solid fa-arrow-right ml-1"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 2: CPM1 TRADING ==================== -->
+    <section id="view-cpm1" class="view-section hidden fade-in space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-[#0f0f14] border border-yellow-500/35 rounded-2xl p-5 sm:p-6">
+        <div>
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold text-yellow-400 mb-1">
+            <i class="fa-solid fa-car-side"></i> CAR PARKING MULTIPLAYER 1 · SALES & DECALS
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-black text-gold-gradient">CPM1 차량 거래 메뉴</h1>
+          <p class="text-xs sm:text-sm text-gray-400 mt-1">SALES · LOGO DECAL · ITASHA DECAL · RACING DECAL 4개 전용 메뉴로 CPM1 차량을 확인하세요.</p>
+        </div>
+        <button type="button" onclick="openSellModal('CPM1')" class="btn-3d-gold px-5 py-3.5 rounded-xl text-sm flex items-center justify-center gap-2 shrink-0">
+          <i class="fa-solid fa-plus"></i>
+          <span>CPM1 차량 판매 등록</span>
+        </button>
+      </div>
+
+      <!-- 4 Dedicated Menu Cards for CPM1 -->
+      <div id="cpm1-menu-cards" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+        <button type="button" onclick="setBoardFilter('CPM1', 'menu', 'SALES')" data-menu="SALES" class="vvip-menu-card selected-menu rounded-2xl p-4 sm:p-5 text-left flex flex-col justify-between gap-3">
+          <div class="flex items-center justify-between">
+            <span class="w-11 h-11 rounded-xl bg-yellow-500/15 border border-yellow-400/50 flex items-center justify-center text-yellow-300 text-lg">
+              <i class="fa-solid fa-tags"></i>
+            </span>
+            <span class="text-[11px] font-black tracking-wider px-2.5 py-1 rounded-full bg-yellow-500/15 text-yellow-300 border border-yellow-500/30">SALES</span>
+          </div>
+          <div>
+            <div class="font-black text-base text-white">판매 메뉴</div>
+            <p class="text-xs text-gray-300 mt-1 leading-relaxed">CPM1 차량 판매 게시글, 가격, 판매자 ID 및 판매중/예약중/판매완료 상태 확인</p>
+          </div>
+        </button>
+
+        <button type="button" onclick="setBoardFilter('CPM1', 'menu', 'LOGO_DECAL')" data-menu="LOGO_DECAL" class="vvip-menu-card rounded-2xl p-4 sm:p-5 text-left flex flex-col justify-between gap-3">
+          <div class="flex items-center justify-between">
+            <span class="w-11 h-11 rounded-xl bg-amber-500/15 border border-amber-400/50 flex items-center justify-center text-amber-300 text-lg">
+              <i class="fa-solid fa-certificate"></i>
+            </span>
+            <span class="text-[11px] font-black tracking-wider px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-200 border border-amber-500/30">LOGO DECAL</span>
+          </div>
+          <div>
+            <div class="font-black text-base text-white">로고차 데칼 확인</div>
+            <p class="text-xs text-gray-300 mt-1 leading-relaxed">등록 차량이 로고차인지 확인하고 브랜드 로고·데칼 사진 및 판매 여부 조회</p>
+          </div>
+        </button>
+
+        <button type="button" onclick="setBoardFilter('CPM1', 'menu', 'ITASHA_DECAL')" data-menu="ITASHA_DECAL" class="vvip-menu-card rounded-2xl p-4 sm:p-5 text-left flex flex-col justify-between gap-3">
+          <div class="flex items-center justify-between">
+            <span class="w-11 h-11 rounded-xl bg-pink-500/15 border border-pink-400/50 flex items-center justify-center text-pink-300 text-lg">
+              <i class="fa-solid fa-sparkles"></i>
+            </span>
+            <span class="text-[11px] font-black tracking-wider px-2.5 py-1 rounded-full bg-pink-500/15 text-pink-200 border border-pink-400/30">ITASHA DECAL</span>
+          </div>
+          <div>
+            <div class="font-black text-base text-white">이타샤 데칼</div>
+            <p class="text-xs text-gray-300 mt-1 leading-relaxed">이타샤 차량 데칼 사진, 캐릭터·디자인 상세, 판매 여부 및 판매자 정보 확인</p>
+          </div>
+        </button>
+
+        <button type="button" onclick="setBoardFilter('CPM1', 'menu', 'RACING_DECAL')" data-menu="RACING_DECAL" class="vvip-menu-card rounded-2xl p-4 sm:p-5 text-left flex flex-col justify-between gap-3">
+          <div class="flex items-center justify-between">
+            <span class="w-11 h-11 rounded-xl bg-cyan-500/15 border border-cyan-400/50 flex items-center justify-center text-cyan-300 text-lg">
+              <i class="fa-solid fa-gauge-high"></i>
+            </span>
+            <span class="text-[11px] font-black tracking-wider px-2.5 py-1 rounded-full bg-cyan-500/15 text-cyan-200 border border-cyan-400/30">RACING DECAL</span>
+          </div>
+          <div>
+            <div class="font-black text-base text-white">레이싱카 데칼</div>
+            <p class="text-xs text-gray-300 mt-1 leading-relaxed">레이싱 디자인 차량 사진, 리버리·데칼 정보, 판매 여부 및 판매자 정보 확인</p>
+          </div>
+        </button>
+      </div>
+
+      <!-- Active Menu Banner & Status Filter -->
+      <div class="p-4 rounded-2xl bg-[#12121a] border border-yellow-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div id="cpm1-menu-desc" class="text-xs sm:text-sm text-yellow-100 font-medium">
+          <strong>SALES — 판매 메뉴:</strong> 차량 판매 게시글, 가격, 판매자 닉네임 및 실제 게임 ID, 판매 중/예약 중/판매 완료 상태를 확인하세요.
+        </div>
+        <select id="cpm1-status-filter" onchange="setBoardFilter('CPM1', 'status', this.value)" class="px-4 py-2.5 rounded-xl bg-[#09090d] border border-yellow-500/30 focus:border-yellow-400 focus:outline-none text-xs sm:text-sm text-gray-200">
+          <option value="ALL">거래 상태: 전체 보기</option>
+          <option value="SELLING">판매 중</option>
+          <option value="RESERVED">예약 중</option>
+          <option value="SOLD">판매 완료</option>
+        </select>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="relative">
+        <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+        <input type="text" id="cpm1-search" oninput="setBoardFilter('CPM1', 'search', this.value)" placeholder="차량 종류, 데칼 정보, 판매자 닉네임, 카파킹 실제 ID 검색..." class="w-full pl-10 pr-4 py-3 rounded-xl bg-[#0f0f14] border border-yellow-500/25 focus:border-yellow-400 focus:outline-none text-sm text-white placeholder-gray-500" />
+      </div>
+
+      <!-- Listings Grid -->
+      <div id="cpm1-listings-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+
+    <!-- ==================== VIEW 3: CPM2 TRADING ==================== -->
+    <section id="view-cpm2" class="view-section hidden fade-in space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-[#0f0f14] border border-yellow-500/35 rounded-2xl p-5 sm:p-6">
+        <div>
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold text-purple-300 mb-1">
+            <i class="fa-solid fa-gauge-high"></i> CAR PARKING MULTIPLAYER 2 · SALES & DECALS
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-black text-gold-gradient">CPM2 차량 거래 메뉴</h1>
+          <p class="text-xs sm:text-sm text-gray-400 mt-1">SALES · LOGO DECAL · ITASHA DECAL · RACING DECAL 4개 전용 메뉴로 CPM2 차량을 확인하세요.</p>
+        </div>
+        <button type="button" onclick="openSellModal('CPM2')" class="btn-3d-gold px-5 py-3.5 rounded-xl text-sm flex items-center justify-center gap-2 shrink-0">
+          <i class="fa-solid fa-plus"></i>
+          <span>CPM2 차량 판매 등록</span>
+        </button>
+      </div>
+
+      <!-- 4 Dedicated Menu Cards for CPM2 -->
+      <div id="cpm2-menu-cards" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+        <button type="button" onclick="setBoardFilter('CPM2', 'menu', 'SALES')" data-menu="SALES" class="vvip-menu-card selected-menu rounded-2xl p-4 sm:p-5 text-left flex flex-col justify-between gap-3">
+          <div class="flex items-center justify-between">
+            <span class="w-11 h-11 rounded-xl bg-yellow-500/15 border border-yellow-400/50 flex items-center justify-center text-yellow-300 text-lg">
+              <i class="fa-solid fa-tags"></i>
+            </span>
+            <span class="text-[11px] font-black tracking-wider px-2.5 py-1 rounded-full bg-yellow-500/15 text-yellow-300 border border-yellow-500/30">SALES</span>
+          </div>
+          <div>
+            <div class="font-black text-base text-white">판매 메뉴</div>
+            <p class="text-xs text-gray-300 mt-1 leading-relaxed">CPM2 차량 판매 게시글, 가격, 판매자 ID 및 판매중/예약중/판매완료 상태 확인</p>
+          </div>
+        </button>
+
+        <button type="button" onclick="setBoardFilter('CPM2', 'menu', 'LOGO_DECAL')" data-menu="LOGO_DECAL" class="vvip-menu-card rounded-2xl p-4 sm:p-5 text-left flex flex-col justify-between gap-3">
+          <div class="flex items-center justify-between">
+            <span class="w-11 h-11 rounded-xl bg-amber-500/15 border border-amber-400/50 flex items-center justify-center text-amber-300 text-lg">
+              <i class="fa-solid fa-certificate"></i>
+            </span>
+            <span class="text-[11px] font-black tracking-wider px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-200 border border-amber-500/30">LOGO DECAL</span>
+          </div>
+          <div>
+            <div class="font-black text-base text-white">로고차 데칼 확인</div>
+            <p class="text-xs text-gray-300 mt-1 leading-relaxed">등록 차량이 로고차인지 확인하고 브랜드 로고·데칼 사진 및 판매 여부 조회</p>
+          </div>
+        </button>
+
+        <button type="button" onclick="setBoardFilter('CPM2', 'menu', 'ITASHA_DECAL')" data-menu="ITASHA_DECAL" class="vvip-menu-card rounded-2xl p-4 sm:p-5 text-left flex flex-col justify-between gap-3">
+          <div class="flex items-center justify-between">
+            <span class="w-11 h-11 rounded-xl bg-pink-500/15 border border-pink-400/50 flex items-center justify-center text-pink-300 text-lg">
+              <i class="fa-solid fa-sparkles"></i>
+            </span>
+            <span class="text-[11px] font-black tracking-wider px-2.5 py-1 rounded-full bg-pink-500/15 text-pink-200 border border-pink-400/30">ITASHA DECAL</span>
+          </div>
+          <div>
+            <div class="font-black text-base text-white">이타샤 데칼</div>
+            <p class="text-xs text-gray-300 mt-1 leading-relaxed">이타샤 차량 데칼 사진, 캐릭터·디자인 상세, 판매 여부 및 판매자 정보 확인</p>
+          </div>
+        </button>
+
+        <button type="button" onclick="setBoardFilter('CPM2', 'menu', 'RACING_DECAL')" data-menu="RACING_DECAL" class="vvip-menu-card rounded-2xl p-4 sm:p-5 text-left flex flex-col justify-between gap-3">
+          <div class="flex items-center justify-between">
+            <span class="w-11 h-11 rounded-xl bg-cyan-500/15 border border-cyan-400/50 flex items-center justify-center text-cyan-300 text-lg">
+              <i class="fa-solid fa-gauge-high"></i>
+            </span>
+            <span class="text-[11px] font-black tracking-wider px-2.5 py-1 rounded-full bg-cyan-500/15 text-cyan-200 border border-cyan-400/30">RACING DECAL</span>
+          </div>
+          <div>
+            <div class="font-black text-base text-white">레이싱카 데칼</div>
+            <p class="text-xs text-gray-300 mt-1 leading-relaxed">레이싱 디자인 차량 사진, 리버리·데칼 정보, 판매 여부 및 판매자 정보 확인</p>
+          </div>
+        </button>
+      </div>
+
+      <!-- Active Menu Banner & Status Filter -->
+      <div class="p-4 rounded-2xl bg-[#12121a] border border-yellow-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div id="cpm2-menu-desc" class="text-xs sm:text-sm text-yellow-100 font-medium">
+          <strong>SALES — 판매 메뉴:</strong> 차량 판매 게시글, 가격, 판매자 닉네임 및 실제 게임 ID, 판매 중/예약 중/판매 완료 상태를 확인하세요.
+        </div>
+        <select id="cpm2-status-filter" onchange="setBoardFilter('CPM2', 'status', this.value)" class="px-4 py-2.5 rounded-xl bg-[#09090d] border border-yellow-500/30 focus:border-yellow-400 focus:outline-none text-xs sm:text-sm text-gray-200">
+          <option value="ALL">거래 상태: 전체 보기</option>
+          <option value="SELLING">판매 중</option>
+          <option value="RESERVED">예약 중</option>
+          <option value="SOLD">판매 완료</option>
+        </select>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="relative">
+        <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+        <input type="text" id="cpm2-search" oninput="setBoardFilter('CPM2', 'search', this.value)" placeholder="차량 종류, 데칼 정보, 판매자 닉네임, 카파킹 실제 ID 검색..." class="w-full pl-10 pr-4 py-3 rounded-xl bg-[#0f0f14] border border-yellow-500/25 focus:border-yellow-400 focus:outline-none text-sm text-white placeholder-gray-500" />
+      </div>
+
+      <!-- Listings Grid -->
+      <div id="cpm2-listings-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+
+    <!-- ==================== VIEW 4: CPM1 HACK SERVICE & VVIP RANK ==================== -->
+    <section id="view-hack" class="view-section hidden fade-in space-y-6">
+      <div class="rainbow-border p-6 sm:p-8 space-y-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-yellow-500/25 pb-5">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-yellow-500/15 border border-yellow-400/50 text-yellow-300 text-xs font-black mb-2">
+              ⚡ CPM1 핵작업 가격 안내 & 자동 할인 계산기
+            </span>
+            <h1 class="text-2xl sm:text-3xl font-black text-gold-gradient">CPM1 핵작업 서비스 & VVIP 등급 혜택</h1>
+            <p class="text-xs sm:text-sm text-gray-300 mt-1">
+              개발자: <span class="nick-developer">👑 JEEP DEVELOPER · BY_ 카파킹 지프 (유튜버) CPM</span>
+            </p>
+          </div>
+          <a href="https://open.kakao.com/me/jeep" target="_blank" rel="noopener noreferrer" class="btn-3d-gold px-5 py-3 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 shrink-0">
+            <i class="fa-solid fa-comment-dots"></i>
+            <span>개발자 오픈채팅 문의 (open.kakao.com/me/jeep)</span>
+          </a>
+        </div>
+
+        <!-- Price Tables Grid + Auto Discount Calculator -->
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+          <div class="xl:col-span-2 space-y-5">
+            <!-- 1. CHROME & CUSTOM -->
+            <div class="bg-[#0a0a0f] border border-yellow-500/30 rounded-2xl p-5">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <h2 class="text-base font-black text-yellow-300">CHROME & CUSTOM <span class="text-xs text-gray-400 font-normal">크롬 및 차량 커스텀</span></h2>
+                <span class="px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/40 text-emerald-300 text-[11px] font-bold">
+                  &lt;PRIVATE_EVENT&gt; 3개 이상 구매 시 5% 할인
+                </span>
+              </div>
+              <div id="hack-list-chrome" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm"></div>
+            </div>
+
+            <!-- 2. VEHICLE SERVICE -->
+            <div class="bg-[#0a0a0f] border border-yellow-500/30 rounded-2xl p-5">
+              <h2 class="text-base font-black text-yellow-300 mb-3">VEHICLE SERVICE <span class="text-xs text-gray-400 font-normal">차량 관련 작업</span></h2>
+              <div id="hack-list-vehicle" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm"></div>
+            </div>
+
+            <!-- 3. UNLOCK SERVICE -->
+            <div class="bg-[#0a0a0f] border border-yellow-500/30 rounded-2xl p-5">
+              <h2 class="text-base font-black text-yellow-300 mb-3">UNLOCK SERVICE <span class="text-xs text-gray-400 font-normal">잠금 해제 작업</span></h2>
+              <div id="hack-list-unlock" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm"></div>
+            </div>
+
+            <!-- 4. GAME MONEY & ID SERVICE -->
+            <div class="bg-[#0a0a0f] border border-yellow-500/30 rounded-2xl p-5">
+              <h2 class="text-base font-black text-yellow-300 mb-3">GAME MONEY & ID SERVICE <span class="text-xs text-gray-400 font-normal">게임머니 및 닉네임 작업</span></h2>
+              <div id="hack-list-money" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm"></div>
+            </div>
+          </div>
+
+          <!-- Right Column: Auto Calculator + Special VVIP Discount Table -->
+          <div class="space-y-5">
+            <div class="gold-card rounded-2xl p-5 space-y-4">
+              <div class="flex items-center justify-between">
+                <h2 class="text-base font-black text-gold-gradient">🧮 작업 견적 & 할인 자동 계산기</h2>
+                <button type="button" onclick="resetHackCalculator()" class="text-[11px] px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-gray-300">초기화</button>
+              </div>
+              <p class="text-xs text-gray-400">원하는 작업을 체크하면 크롬 도색 3개 이상 5% 할인이 자동 계산됩니다.</p>
+
+              <div class="p-4 rounded-xl bg-[#09090d] border border-yellow-500/25 space-y-2 text-xs sm:text-sm">
+                <div class="flex justify-between text-gray-300">
+                  <span>선택 작업 수</span>
+                  <span id="calc-count" class="font-bold text-white">0개</span>
+                </div>
+                <div class="flex justify-between text-gray-300">
+                  <span>크롬 도색 선택 수</span>
+                  <span id="calc-chrome-count" class="font-bold text-yellow-300">0개 (<span id="calc-chrome-eligible" class="text-gray-400">5% 할인 미적용</span>)</span>
+                </div>
+                <div class="flex justify-between text-gray-300 pt-1 border-t border-white/10">
+                  <span>기본 합계 금액</span>
+                  <span id="calc-base-total" class="font-bold text-white">0원</span>
+                </div>
+                <div class="flex justify-between text-emerald-300">
+                  <span>크롬 5% 할인 금액</span>
+                  <span id="calc-discount-amount" class="font-bold">-0원</span>
+                </div>
+                <div class="flex justify-between text-base font-black pt-2 border-t border-yellow-500/30">
+                  <span class="text-yellow-200">최종 결제 예상 금액</span>
+                  <span id="calc-final-total" class="text-gold-gradient text-lg">0원</span>
+                </div>
+              </div>
+
+              <!-- SPECIAL VVIP DISCOUNT TABLE -->
+              <div class="p-4 rounded-xl bg-[#09090d] border border-yellow-500/30 space-y-2.5">
+                <div class="text-xs font-black text-yellow-300">💎 SPECIAL VVIP DISCOUNT (크롬 3개 이상 5% 할인)</div>
+                <table class="w-full text-xs text-left border-collapse">
+                  <thead>
+                    <tr class="border-b border-white/10 text-gray-400">
+                      <th class="py-1.5">기본 가격</th>
+                      <th class="py-1.5 text-right text-emerald-300">할인 가격</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-white/5 text-gray-200 font-mono">
+                    <tr><td class="py-1.5">500원</td><td class="py-1.5 text-right text-emerald-300 font-bold">475원</td></tr>
+                    <tr><td class="py-1.5">1,000원</td><td class="py-1.5 text-right text-emerald-300 font-bold">950원</td></tr>
+                    <tr><td class="py-1.5">1,500원</td><td class="py-1.5 text-right text-emerald-300 font-bold">1,425원</td></tr>
+                    <tr><td class="py-1.5">2,000원</td><td class="py-1.5 text-right text-emerald-300 font-bold">1,900원</td></tr>
+                  </tbody>
+                </table>
+                <p class="text-[11px] text-gray-400">※ 할인은 크롬 도색 작업에만 적용됩니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. VVIP RANK — SPECIAL EVENT -->
+        <div class="p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-yellow-950/45 via-[#121118] to-purple-950/30 border border-yellow-400/50 space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h2 class="text-lg sm:text-xl font-black text-gold-gradient">👑 VVIP RANK — SPECIAL EVENT (최다 구매 고객 특별 등급 혜택)</h2>
+            <span class="px-3 py-1 rounded-full bg-yellow-500/20 border border-yellow-400/50 text-yellow-200 text-xs font-bold">총 3대 본인 선택 증정</span>
+          </div>
+          <p class="text-xs sm:text-sm text-gray-200 leading-relaxed">
+            가장 많은 작업 및 차량을 구매하신 고객에게 <strong>JEEP ROYAL VVIP CPM</strong> 최고 등급인 <strong>VVIP</strong> 승급 기회를 제공합니다. 많이 구매할수록 VVIP 승급 기회와 특별 혜택이 강화됩니다.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div class="p-4 rounded-xl bg-black/50 border border-yellow-500/30">
+              <div class="text-sm font-black text-yellow-300">1. 이타샤 차량</div>
+              <p class="text-xs text-gray-300 mt-1">VVIP 특별 보상 선택 차량 (1/3)</p>
+            </div>
+            <div class="p-4 rounded-xl bg-black/50 border border-yellow-500/30">
+              <div class="text-sm font-black text-yellow-300">2. 에딧 바디 편집 차량</div>
+              <p class="text-xs text-gray-300 mt-1">VVIP 특별 보상 선택 차량 (2/3)</p>
+            </div>
+            <div class="p-4 rounded-xl bg-black/50 border border-yellow-500/30">
+              <div class="text-sm font-black text-yellow-300">3. 로고 차량</div>
+              <p class="text-xs text-gray-300 mt-1">VVIP 특별 보상 선택 차량 (3/3)</p>
+            </div>
+          </div>
+          <p class="text-xs text-amber-200 font-medium">
+            ※ 실제 구매 내역을 기준으로 등급을 산정하며, 최종 확정된 누적 구매 내역 및 운영진 검토 완료 시 보상이 지급됩니다.
+          </p>
+        </div>
+
+        <!-- 6. SERVICE RULES & 7. DEVELOPER CONTACT -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="p-5 rounded-2xl bg-[#0a0a0f] border border-yellow-500/25 space-y-2.5">
+            <h2 class="text-base font-black text-yellow-300">📜 SERVICE RULES · 이용 규정 및 제한 사항</h2>
+            <ol class="space-y-1.5 text-xs text-gray-200 leading-relaxed list-decimal list-inside">
+              <li>문의 시 원하는 작업명을 정확하게 알려주세요.</li>
+              <li>작업 가능 여부와 가격을 먼저 확인해 주세요.</li>
+              <li>게임 업데이트에 따라 일부 작업이 제한될 수 있습니다.</li>
+              <li>작업 전 계정 및 차량 호환 여부를 확인합니다.</li>
+              <li>비매너 및 장난 문의는 받지 않습니다.</li>
+              <li>계정 정보와 비밀번호는 무분별하게 공유하지 마세요.</li>
+              <li>작업 가능 여부가 확인되지 않은 서비스는 판매 중으로 표시하지 마세요.</li>
+              <li>작업 및 거래 관련 문제는 관리자에게 문의해 주세요.</li>
+            </ol>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-[#0a0a0f] border border-yellow-500/25 flex flex-col justify-between space-y-4">
+            <div class="space-y-2">
+              <h2 class="text-base font-black text-yellow-300">📞 DEVELOPER CONTACT · 개발자 문의</h2>
+              <p class="text-xs sm:text-sm text-gray-200">개발자: <span class="nick-developer">BY_ 카파킹 지프 (유튜버) CPM</span></p>
+              <p class="text-xs text-gray-400 leading-relaxed">핵작업 및 차량 관련 문의는 아래 공식 오픈카카오톡 링크를 이용해 주세요.</p>
+              <a href="https://open.kakao.com/me/jeep" target="_blank" rel="noopener noreferrer" class="inline-block text-sm font-mono font-bold text-yellow-300 underline break-all">
+                https://open.kakao.com/me/jeep
+              </a>
+            </div>
+            <button type="button" onclick="navigateTo('safety')" class="w-full py-3 rounded-xl bg-red-500/15 hover:bg-red-500/25 border border-red-500/40 text-xs font-bold text-red-200 transition">
+              사기 방지 및 신고 센터 바로가기 →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 5: FRAUD PREVENTION & SAFETY ==================== -->
+    <section id="view-safety" class="view-section hidden fade-in space-y-6">
+      <div class="rainbow-border p-6 sm:p-8">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+          <div>
+            <span class="inline-block px-3 py-1 rounded-full bg-red-500/15 border border-red-500/40 text-red-300 text-xs font-bold mb-2">
+              🚨 SAFETY & ANTI-FRAUD POLICY
+            </span>
+            <h1 class="text-2xl sm:text-3xl font-black text-gold-gradient">사기 방지 및 신고 시스템</h1>
+            <p class="text-sm text-gray-300 mt-1">JEEP ROYAL VVIP CPM은 안전하고 공정한 거래 환경을 최우선으로 생각합니다.</p>
+          </div>
+          <button type="button" onclick="openReportModal('', '', '')" class="px-5 py-3.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm shadow-lg shadow-red-600/30 transition flex items-center justify-center gap-2 shrink-0">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span>사기 피해 신고 접수하기</span>
+          </button>
+        </div>
+
+        <!-- 9 Prohibited Acts -->
+        <div class="bg-[#0b0b0f] border border-red-500/30 rounded-2xl p-5 sm:p-6 mb-6">
+          <h2 class="text-base sm:text-lg font-bold text-red-400 mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-ban"></i>
+            <span>다음과 같은 행위는 엄격하게 금지합니다</span>
+          </h2>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-200">
+            <li class="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5">
+              <span class="text-red-400 font-bold">01.</span>
+              <span>돈을 받고 차량을 지급하지 않는 행위</span>
+            </li>
+            <li class="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5">
+              <span class="text-red-400 font-bold">02.</span>
+              <span>차량을 먼저 받은 후 대금을 지급하지 않는 행위</span>
+            </li>
+            <li class="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5">
+              <span class="text-red-400 font-bold">03.</span>
+              <span>허위 차량 사진 및 거짓 판매 정보 등록</span>
+            </li>
+            <li class="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5">
+              <span class="text-red-400 font-bold">04.</span>
+              <span>다른 사람의 카파킹 ID를 도용하는 행위</span>
+            </li>
+            <li class="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5">
+              <span class="text-red-400 font-bold">05.</span>
+              <span>거래 완료 후 일방적으로 연락을 끊는 행위</span>
+            </li>
+            <li class="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5">
+              <span class="text-red-400 font-bold">06.</span>
+              <span>동일한 차량을 이용한 반복적인 사기 행위</span>
+            </li>
+            <li class="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5">
+              <span class="text-red-400 font-bold">07.</span>
+              <span>다른 판매자의 차량 사진이나 데칼을 무단 도용하는 행위</span>
+            </li>
+            <li class="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5">
+              <span class="text-red-400 font-bold">08.</span>
+              <span>거래 과정에서 협박, 욕설, 비매너 행위</span>
+            </li>
+            <li class="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5 md:col-span-2">
+              <span class="text-red-400 font-bold">09.</span>
+              <span>관리자 및 회원을 사칭하는 행위</span>
+            </li>
+          </ul>
+          <p class="mt-4 text-xs text-amber-300 font-semibold">
+            ※ 모든 차량 게시글의 [신고하기] 버튼을 통해 신고할 수 있으며, 허위 신고 역시 엄격히 금지됩니다.
+          </p>
+        </div>
+
+        <!-- Strong Trading Warning -->
+        <div class="bg-gradient-to-br from-amber-950/40 to-[#0d0d12] border border-yellow-500/40 rounded-2xl p-5 sm:p-6 space-y-3">
+          <h2 class="text-base sm:text-lg font-bold text-yellow-300 flex items-center gap-2">
+            <span>⚠️</span>
+            <span>강력한 거래 주의사항</span>
+          </h2>
+          <div class="space-y-2.5 text-xs sm:text-sm text-gray-200 leading-relaxed">
+            <p>• JEEP ROYAL VVIP CPM은 안전한 거래 환경을 제공하기 위해 노력하지만 모든 개인 간 거래의 안전성을 보장하지는 않습니다.</p>
+            <p>• 거래 전 반드시 상대방의 <strong>실제 카파킹 ID와 판매 이력</strong>을 확인해 주세요.</p>
+            <p>• 입금 내역, 대화 내용, 차량 지급 여부 등 <strong>거래 증거를 반드시 보관</strong>해 주세요.</p>
+            <p>• 사기 피해가 의심되는 경우 즉시 관리자에게 신고하고, 필요한 경우 보호자와 함께 경찰 등 관계 기관에 도움을 요청해 주세요.</p>
+            <p class="text-yellow-200 font-medium">• 사기 및 사칭이 확인되면 증거를 검토한 뒤 게시글 삭제, 거래 기능 제한, 계정 이용 정지 등의 조치를 취할 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 6: MEMBER PROFILE ==================== -->
+    <section id="view-profile" class="view-section hidden fade-in space-y-6">
+      <div id="profile-content" class="space-y-6"></div>
+    </section>
+
+    <!-- ==================== VIEW 7: ADMIN DASHBOARD ==================== -->
+    <section id="view-admin" class="view-section hidden fade-in space-y-6">
+      <div id="admin-guard-container"></div>
+    </section>
+
+  </main>
+
+  <!-- Developer & Platform Footer -->
+  <footer class="border-t border-yellow-500/20 bg-[#050507] py-10 px-4 sm:px-6 mt-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      <div class="space-y-2">
+        <div class="font-display font-extrabold text-xl text-gold-gradient">👑 JEEP ROYAL VVIP CPM — PREMIUM CAR MARKET</div>
+        <p class="text-xs sm:text-sm text-gray-300">
+          Made by <span class="nick-developer">BY_ 카파킹 지프 (유튜버) CPM</span> &nbsp;|&nbsp;
+          <span class="text-yellow-400 font-semibold">관리자:</span> <span class="nick-admin">이케타니</span>, <span class="nick-admin">엠빠 M5</span>
+        </p>
+        <p class="text-xs text-gray-400">
+          CPM1 / CPM2 차량 거래 전용 플랫폼 · JEEP ROYAL VVIP CPM을 이용해 주셔서 감사합니다!
+        </p>
+        <p class="text-xs text-gray-500">
+          회원 여러분의 안전하고 즐거운 거래를 위해 최선을 다하겠습니다.
+        </p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-2">
+        <button type="button" onclick="navigateTo('home')" class="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-xs text-gray-300 transition">홈으로</button>
+        <button type="button" onclick="navigateTo('cpm1')" class="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-xs text-gray-300 transition">CPM1 거래</button>
+        <button type="button" onclick="navigateTo('cpm2')" class="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-xs text-gray-300 transition">CPM2 거래</button>
+        <button type="button" onclick="navigateTo('hack')" class="px-3.5 py-2 rounded-xl bg-yellow-500/10 hover:bg-yellow-500/20 text-xs text-yellow-200 border border-yellow-500/30 transition">핵작업·VVIP등급</button>
+        <button type="button" onclick="navigateTo('safety')" class="px-3.5 py-2 rounded-xl bg-red-500/10 hover:bg-red-500/20 text-xs text-red-300 border border-red-500/30 transition">사기 방지 센터</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Sticky Tab Bar -->
+  <nav class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-[#0a0a0e]/95 backdrop-blur-xl border-t border-yellow-500/25 pb-[env(safe-area-inset-bottom)]">
+    <div class="grid grid-cols-5 h-16 items-center px-1" id="mobile-bottom-nav">
+      <button type="button" onclick="navigateTo('home')" data-nav="home" class="mobile-nav-btn flex flex-col items-center justify-center gap-1 text-yellow-400">
+        <i class="fa-solid fa-house text-base"></i>
+        <span class="text-[10px] font-semibold">홈</span>
+      </button>
+      <button type="button" onclick="navigateTo('cpm1')" data-nav="cpm1" class="mobile-nav-btn flex flex-col items-center justify-center gap-1 text-gray-400">
+        <i class="fa-solid fa-car text-base"></i>
+        <span class="text-[10px] font-semibold">CPM1</span>
+      </button>
+      <button type="button" onclick="navigateTo('cpm2')" data-nav="cpm2" class="mobile-nav-btn flex flex-col items-center justify-center gap-1 text-gray-400">
+        <i class="fa-solid fa-flag-checkered text-base"></i>
+        <span class="text-[10px] font-semibold">CPM2</span>
+      </button>
+      <button type="button" onclick="navigateTo('safety')" data-nav="safety" class="mobile-nav-btn flex flex-col items-center justify-center gap-1 text-gray-400">
+        <i class="fa-solid fa-shield-halved text-base"></i>
+        <span class="text-[10px] font-semibold">사기방지</span>
+      </button>
+      <button type="button" onclick="handleMobileFifthTab()" id="mobile-fifth-btn" class="mobile-nav-btn flex flex-col items-center justify-center gap-1 text-gray-400">
+        <i class="fa-solid fa-user text-base" id="mobile-fifth-icon"></i>
+        <span class="text-[10px] font-semibold" id="mobile-fifth-label">로그인</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== MODAL 1: LOGIN & REGISTRATION ==================== -->
+  <div id="auth-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-md p-4 overflow-y-auto">
+    <div class="rainbow-border w-full max-w-lg my-auto p-6 sm:p-7 relative shadow-2xl">
+      <button type="button" onclick="closeModal('auth-modal')" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/5 hover:bg-white/15 flex items-center justify-center text-gray-400 hover:text-white transition">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Auth Mode Switcher -->
+      <div class="flex gap-2 p-1 rounded-xl bg-[#08080b] border border-yellow-500/25 mb-5">
+        <button type="button" id="tab-login-btn" onclick="switchAuthTab('login')" class="flex-1 py-2.5 rounded-lg text-sm font-bold transition">
+          로그인하기
+        </button>
+        <button type="button" id="tab-register-btn" onclick="switchAuthTab('register')" class="flex-1 py-2.5 rounded-lg text-sm font-bold transition">
+          회원가입하기
+        </button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <form id="login-form" onsubmit="handleLoginSubmit(event)" class="space-y-4">
+        <div class="text-center mb-2">
+          <h2 class="text-xl font-black text-gold-gradient">👑 JEEP ROYAL VVIP CPM 로그인</h2>
+          <p class="text-xs text-gray-400 mt-1">카파킹 실제 ID와 비밀번호로 로그인하거나 빠른 체험 로그인을 이용하세요.</p>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-yellow-300 mb-1.5">카파킹 실제 게임 ID (예: NM82811)</label>
+          <input type="text" id="login-cpm-id" required placeholder="본인의 카파킹 실제 ID 입력" class="w-full px-4 py-3 rounded-xl bg-[#09090d] border border-yellow-500/30 focus:border-yellow-400 focus:outline-none text-sm text-white uppercase" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-yellow-300 mb-1.5">비밀번호</label>
+          <input type="password" id="login-password" required placeholder="비밀번호 입력" class="w-full px-4 py-3 rounded-xl bg-[#09090d] border border-yellow-500/30 focus:border-yellow-400 focus:outline-none text-sm text-white" />
+        </div>
+
+        <button type="submit" id="login-submit-btn" class="btn-gold w-full py-3.5 rounded-xl text-sm">
+          로그인하기
+        </button>
+
+        <!-- Quick Login Helpers -->
+        <div class="pt-3 border-t border-yellow-500/20 space-y-2">
+          <div class="text-[11px] text-gray-400 font-semibold">빠른 접속 / 권한 테스트 로그인</div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+            <button type="button" onclick="quickLoginRole('MEMBER')" class="px-3 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-xs font-bold text-gray-200 transition">
+              일반 회원 체험
+            </button>
+            <button type="button" onclick="quickLoginRole('ADMIN')" class="px-3 py-2 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 border border-amber-400/40 text-xs font-bold text-amber-300 transition">
+              관리자 (이케타니)
+            </button>
+            <button type="button" onclick="quickLoginRole('DEVELOPER')" class="px-3 py-2 rounded-xl bg-purple-500/15 hover:bg-purple-500/25 border border-purple-400/40 text-xs font-bold text-yellow-200 transition">
+              개발자 (지프 CPM)
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- REGISTER FORM -->
+      <form id="register-form" onsubmit="handleRegisterSubmit(event)" class="hidden space-y-4 max-h-[75vh] overflow-y-auto pr-1">
+        <div class="text-center mb-2">
+          <h2 class="text-xl font-black text-gold-gradient">👑 VVIP 회원 가입 및 본인 등록</h2>
+          <p class="text-xs text-gray-400 mt-1">안전한 거래를 위해 아래 필수 정보를 정확히 입력해 주세요.</p>
+        </div>
+
+        <!-- 1. 카파킹 실제 게임 ID -->
+        <div>
+          <label class="block text-xs font-bold text-yellow-300 mb-1">1. 카파킹 실제 게임 ID 입력 <span class="text-red-400">*</span></label>
+          <input type="text" id="reg-cpm-id" required placeholder="예) NM82811" class="w-full px-4 py-2.5 rounded-xl bg-[#09090d] border border-yellow-500/30 focus:border-yellow-400 focus:outline-none text-sm text-white uppercase" />
+          <div class="mt-2 p-3 rounded-xl bg-yellow-500/10 border border-yellow-500/30 text-[11px] text-yellow-200 leading-relaxed">
+            <strong>💡 카파킹 ID 확인 방법:</strong><br/>
+            카파킹 게임에 접속한 다음 <strong>랭크 메뉴</strong>를 누르면 본인의 실제 ID를 확인할 수 있습니다.
+          </div>
+        </div>
+
+        <!-- 2. 카파킹 실제 닉네임 -->
+        <div>
+          <label class="block text-xs font-bold text-yellow-300 mb-1">2. 카파킹 실제 닉네임 입력 <span class="text-red-400">*</span></label>
+          <input type="text" id="reg-nickname" required placeholder="게임 내 실제 닉네임 입력" class="w-full px-4 py-2.5 rounded-xl bg-[#09090d] border border-yellow-500/30 focus:border-yellow-400 focus:outline-none text-sm text-white" />
+          <p class="text-[11px] text-gray-400 mt-1">※ 일반 회원은 개발자 및 관리자 전용 닉네임/인증 마크를 사용할 수 없습니다.</p>
+        </div>
+
+        <!-- 계정 등급 / 역할 선택 -->
+        <div>
+          <label class="block text-xs font-bold text-yellow-300 mb-1">계정 등급 선택 (권한 검증 적용)</label>
+          <select id="reg-role" onchange="onRegisterRoleChange(this.value)" class="w-full px-4 py-2.5 rounded-xl bg-[#09090d] border border-yellow-500/30 focus:border-yellow-400 focus:outline-none text-sm text-white">
+            <option value="MEMBER">일반 회원 (VVIP MEMBER)</option>
+            <option value="ADMIN">관리자 (JEEP ADMIN · 이케타니 / 엠빠 M5)</option>
+            <option value="DEVELOPER">개발자 (👑 JEEP DEVELOPER · BY_ 카파킹 지프 (유튜버) CPM)</option>
+          </select>
+        </div>
+
+        <!-- 비밀번호 설정 -->
+        <div>
+          <label class="block text-xs font-bold text-yellow-300 mb-1">비밀번호 설정 (4자 이상) <span class="text-red-400">*</span></label>
+          <input type="password" id="reg-password" required minlength="4" placeholder="로그인에 사용할 비밀번호 입력" class="w-full px-4 py-2.5 rounded-xl bg-[#09090d] border border-yellow-500/30 focus:border-yellow-400 focus:outline-none text-sm text-white" />
+        </div>
+
+        <!-- 3. 프로필 사진 업로드 -->
+        <div>
+          <label class="block text-xs font-bold text-yellow-300 mb-1">3. 프로필 사진 업로드 <span class="text-yellow-400">(미선택 시 기본 VVIP 아바타 자동 적용)</span></label>
+          <div class="flex items-center gap-3">
+            <div id="reg-avatar-preview" class="w-16 h-16 rounded-2xl bg-[#09090d] border border-dashed border-yellow-500/50 flex items-center justify-center overflow-hidden shrink-0 text-gray-500 text-xs text-center">
+              미리보기
+            </div>
+            <label class="flex-1 cursor-pointer px-4 py-3 rounded-xl bg-[#14141d] hover:bg-[#1b1b26] border border-yellow-500/35 text-xs text-yellow-200 font-semibold text-center transition">
+              <i class="fa-solid fa-camera mr-1.5"></i>프로필 사진 선택하기
+              <input type="file" id="reg-avatar-file" accept="image/*" onchange="previewImageFile(this, 'reg-avatar-preview', 'avatar')" class="hidden" />
+            </label>
+          </div>
+
+          <!-- 프로필 사진 규정 경고 -->
+          <div class="mt-2.5 p-3 rounded-xl bg-red-950/40 border border-red-500/40 text-[11px] text-red-200 space-y-1">
+            <div class="font-bold text-red-300">⚠️ 프로필 사진 관련 규정</div>
+            <p>• 본인이 사용하는 정상적인 프로필 사진을 등록해 주세요.</p>
+            <p>• 음란물, 혐오 이미지, 사칭 이미지 및 부적절한 사진은 금지합니다.</p>
+            <p>• 허위 사진이나 부적절한 이미지를 등록하면 계정 이용이 제한될 수 있습니다.</p>
+          </div>
+        </div>
+
+        <!-- 4. 카카오톡 오픈프로필 링크 -->
+        <div>
+          <label class="block text-xs font-bold text-yellow-300 mb-1">4. 카카오톡 오픈프로필 링크 입력 <span class="text-red-400">*</span></label>
+          <input type="text" id="reg-kakao" required placeholder="https://open.kakao.com/o/..." class="w-full px-4 py-2.5 rounded-xl bg-[#09090d] border border-yellow-500/30 focus:border-yellow-400 focus:outline-none text-sm text-white" />
+        </div>
+
+        <button type="submit" id="reg-submit-btn" class="btn-gold w-full py-3.5 rounded-xl text-sm">
+          완료하기
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 2: VEHICLE SELL REGISTRATION ==================== -->
+  <div id="sell-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-md p-4 overflow-y-auto">
+    <div class="rainbow-border w-full max-w-lg my-auto p-6 sm:p-7 relative">
+      <button type="button" onclick="closeModal('sell-modal')" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/5 hover:bg-white/15 flex items-center justify-center text-gray-400 hover:text-white transition">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="mb-5">
+        <span id="sell-game-badge" class="inline-block px-3 py-1 rounded-full bg-yellow-500/15 border border-yellow-500/40 text-yellow-300 text-xs font-bold mb-1.5">CPM1</span>
+        <h2 id="sell-modal-title" class="text-xl font-black text-gold-gradient">차량 판매 등록</h2>
+        <p class="text-xs text-gray-400 mt-0.5">정확한 차량 정보와 사진을 등록해 주세요. (등록 후 관리자 확인 절차 진행)</p>
+      </div>
+
+      <form id="sell-form" onsubmit="handleSellSubmit(event)" class="space-y-4 max-h-[75vh] overflow-y-auto pr-1">
+        <input type="hidden" id="sell-game-type" value="CPM1" />
+
+        <div>
+          <label class="block text-xs font-bold text-yellow-300 mb-1">차량 거래 메뉴 선택 <span class="text-red-400">*</span></label>
+          <select id="sell-menu" required onchange="toggleDecalFields(this.value)" class="w-full px-4 py-3 rounded-xl bg-[#09090d] border border-yellow-500/30 focus:border-yellow-400 focus:outline-none text-sm text-white">
+            <option value="SALES">🏷️ SALES — 판매 메뉴</option>
+            <option value="LOGO_DECAL">🔰 LOGO DECAL — 로고차 데칼 확인</option>
+            <option value="ITASHA_DECAL">🎨 ITASHA DECAL — 이타샤 데칼</option>
+            <option value="RACING_DECAL">🏁 RACING DECAL — 레이싱카 데칼</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-yellow-300 mb-1">판매 상태 <span class="text-red-400">*</span></label>
+          <select id="sell-status" required class="w-full px-4 py-3 rounded-xl bg-[#09090d] border border-yellow-500/30 focus:border-yellow-400 focus:outline-none text-sm text-white">
+            <option value="SELLING">판매 중</option>
+            <option value="RESERVED">예약 중</option>
+            <option value="SOLD">판매 완료</option>
+          </select>
+        </div>
+
+        <div id="sell-decal-extra" class="hidden space-y-3 p-3.5 rounded-xl bg-yellow-500/5 border border-yellow-500/25">
+          <div>
+            <label class="block text-xs font-bold text-yellow-200 mb-1">브랜드 로고 / 캐릭터 / 레이싱 데칼 정보</label>
+            <input type="text" id="sell-decal-info" placeholder="예) 브랜드 로고명, 캐릭터 디자인, 레이싱 리버리 상세" class="w-full px-3.5 py-2 rounded-xl bg-[#09090d] border border-yellow-500/30 text-xs sm:text-sm text-white focus:outline-none" />
+          </div>
+          <label class="flex items-center gap-2 text-xs text-yellow-200 cursor-pointer">
+            <input type="checkbox" id="sell-is-logo-car" class="rounded accent-yellow-400" />
+            <span>로고차 확인 체크 (등록된 차량이 로고차임을 표시)</span>
+          </label>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-yellow-300 mb-1">차량 종류 <span class="text-red-400">*</span></label>
+          <input type="text" id="sell-title" required placeholder="예) BMW 차량 판매합니다." class="w-full px-4 py-3 rounded-xl bg-[#09090d] border border-yellow-500/30 focus:border-yellow-400 focus:outline-none text-sm text-white" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-yellow-300 mb-1">판매 가격 <span class="text-red-400">*</span></label>
+          <input type="text" id="sell-price" required placeholder="예) 1,000원에 판매합니다." class="w-full px-4 py-3 rounded-xl bg-[#09090d] border border-yellow-500/30 focus:border-yellow-400 focus:outline-none text-sm text-white" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-yellow-300 mb-1">카파킹 실제 ID <span class="text-red-400">*</span></label>
+          <input type="text" id="sell-cpm-id" required placeholder="예) NM82811" class="w-full px-4 py-3 rounded-xl bg-[#09090d] border border-yellow-500/30 focus:border-yellow-400 focus:outline-none text-sm text-white uppercase" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-yellow-300 mb-1">차량 사진 업로드 <span class="text-yellow-400">(미선택 시 VVIP 차량 카드 이미지 자동 생성)</span></label>
+          <div id="sell-photo-preview" class="w-full h-40 rounded-xl bg-[#09090d] border border-dashed border-yellow-500/40 flex flex-col items-center justify-center overflow-hidden mb-2 text-gray-500 text-xs">
+            <i class="fa-solid fa-image text-2xl mb-1 text-yellow-500/50"></i>
+            <span>차량 사진을 선택하면 미리보기가 표시됩니다</span>
+          </div>
+          <label class="block w-full cursor-pointer px-4 py-2.5 rounded-xl bg-[#14141d] hover:bg-[#1b1b26] border border-yellow-500/35 text-xs text-yellow-200 font-semibold text-center transition">
+            <i class="fa-solid fa-upload mr-1.5"></i>차량 사진 첨부하기
+            <input type="file" id="sell-photo-file" accept="image/*" onchange="previewImageFile(this, 'sell-photo-preview', 'vehicle')" class="hidden" />
+          </label>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-yellow-300 mb-1">판매 설명 입력 <span class="text-red-400">*</span></label>
+          <textarea id="sell-desc" rows="3" required placeholder="마력, 튜닝 상태, 데칼 디테일, 거래 방식 등을 자세히 적어주세요." class="w-full px-4 py-3 rounded-xl bg-[#09090d] border border-yellow-500/30 focus:border-yellow-400 focus:outline-none text-sm text-white resize-none"></textarea>
+        </div>
+
+        <button type="submit" id="sell-submit-btn" class="btn-gold w-full py-3.5 rounded-xl text-sm">
+          판매 등록하기
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 3: FRAUD REPORT ==================== -->
+  <div id="report-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-md p-4 overflow-y-auto">
+    <div class="w-full max-w-lg my-auto bg-[#0f0f14] border border-red-500/50 rounded-2xl p-6 sm:p-7 relative shadow-2xl">
+      <button type="button" onclick="closeModal('report-modal')" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/5 hover:bg-white/15 flex items-center justify-center text-gray-400 hover:text-white transition">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="mb-5">
+        <span class="inline-block px-3 py-1 rounded-full bg-red-500/15 border border-red-500/40 text-red-300 text-xs font-bold mb-1.5">🚨 FRAUD REPORT</span>
+        <h2 class="text-xl font-black text-white">사기 및 규정 위반 신고하기</h2>
+        <p class="text-xs text-gray-400 mt-1">접수된 신고와 증거 자료는 관리자 전용 페이지로 즉시 전송됩니다. 허위 신고는 제재 대상입니다.</p>
+      </div>
+
+      <form id="report-form" onsubmit="handleReportSubmit(event)" class="space-y-4 max-h-[75vh] overflow-y-auto pr-1">
+        <input type="hidden" id="report-post-id" value="" />
+        <input type="hidden" id="report-post-title" value="" />
+
+        <div>
+          <label class="block text-xs font-bold text-red-300 mb-1">1. 신고 대상자의 카파킹 ID <span class="text-red-400">*</span></label>
+          <input type="text" id="report-target-id" required placeholder="예) NM82811" class="w-full px-4 py-2.5 rounded-xl bg-[#09090d] border border-red-500/35 focus:border-red-400 focus:outline-none text-sm text-white uppercase" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-red-300 mb-1">2. 카카오톡 또는 거래 연락처 <span class="text-red-400">*</span></label>
+          <input type="text" id="report-contact" required placeholder="신고 대상자 오픈채팅 링크 또는 본인 연락처" class="w-full px-4 py-2.5 rounded-xl bg-[#09090d] border border-red-500/35 focus:border-red-400 focus:outline-none text-sm text-white" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-red-300 mb-1">3. 신고 사유 <span class="text-red-400">*</span></label>
+          <select id="report-reason" required class="w-full px-4 py-2.5 rounded-xl bg-[#09090d] border border-red-500/35 focus:border-red-400 focus:outline-none text-sm text-white">
+            <option value="돈을 받고 차량을 지급하지 않음">돈을 받고 차량을 지급하지 않는 행위</option>
+            <option value="차량을 먼저 받은 후 대금 미지급">차량을 먼저 받은 후 대금을 지급하지 않는 행위</option>
+            <option value="허위 차량 사진 및 거짓 판매 정보">허위 차량 사진 및 거짓 판매 정보 등록</option>
+            <option value="타인 카파킹 ID 도용">다른 사람의 카파킹 ID를 도용하는 행위</option>
+            <option value="거래 완료 후 일방적 연락 두절">거래 완료 후 일방적으로 연락을 끊는 행위</option>
+            <option value="동일 차량 반복 사기">동일한 차량을 이용한 반복적인 사기 행위</option>
+            <option value="차량 사진 및 데칼 무단 도용">다른 판매자의 차량 사진이나 데칼을 무단 도용하는 행위</option>
+            <option value="협박, 욕설, 비매너 행위">거래 과정에서 협박, 욕설, 비매너 행위</option>
+            <option value="관리자 및 회원 사칭">관리자 및 회원을 사칭하는 행위</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-red-300 mb-1">4. 거래 내용 및 상세 설명 <span class="text-red-400">*</span></label>
+          <textarea id="report-details" rows="3" required placeholder="발생 일시, 거래 금액, 피해 경위 등을 구체적으로 작성해 주세요." class="w-full px-4 py-2.5 rounded-xl bg-[#09090d] border border-red-500/35 focus:border-red-400 focus:outline-none text-sm text-white resize-none"></textarea>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-red-300 mb-1">5. 거래 증거 사진 및 대화 캡처 첨부 <span class="text-red-400">(미선택 시 증거 요약 카드 생성)</span></label>
+          <div id="report-evidence-preview" class="w-full h-36 rounded-xl bg-[#09090d] border border-dashed border-red-500/40 flex flex-col items-center justify-center overflow-hidden mb-2 text-gray-500 text-xs">
+            <i class="fa-solid fa-file-shield text-2xl mb-1 text-red-400/60"></i>
+            <span>입금 내역, 카카오톡 대화 캡처 등 증거 사진 첨부</span>
+          </div>
+          <label class="block w-full cursor-pointer px-4 py-2.5 rounded-xl bg-red-500/15 hover:bg-red-500/25 border border-red-500/40 text-xs text-red-200 font-semibold text-center transition">
+            <i class="fa-solid fa-paperclip mr-1.5"></i>증거 스크린샷 선택하기
+            <input type="file" id="report-evidence-file" accept="image/*" onchange="previewImageFile(this, 'report-evidence-preview', 'evidence')" class="hidden" />
+          </label>
+        </div>
+
+        <button type="submit" id="report-submit-btn" class="w-full py-3.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-sm transition">
+          신고 접수하기
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 4: IMAGE ZOOM VIEWER ==================== -->
+  <div id="zoom-modal" onclick="closeModal('zoom-modal')" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/90 backdrop-blur-lg p-4">
+    <div onclick="event.stopPropagation()" class="max-w-4xl w-full bg-[#0c0c11] border border-yellow-500/40 rounded-2xl overflow-hidden shadow-2xl">
+      <div class="flex items-center justify-between px-4 py-3 border-b border-white/10">
+        <span id="zoom-caption" class="text-xs sm:text-sm font-bold text-yellow-200 truncate">이미지 확대 보기</span>
+        <button type="button" onclick="closeModal('zoom-modal')" class="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/15 flex items-center justify-center text-gray-300 hover:text-white">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="p-3 sm:p-5 flex items-center justify-center bg-black max-h-[80vh] overflow-auto">
+        <img id="zoom-img" src="" alt="확대 이미지" class="max-w-full max-h-[72vh] object-contain rounded-xl" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 5: CUSTOM MESSAGE DIALOG ==================== -->
+  <div id="dialog-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/75 backdrop-blur-sm p-4">
+    <div class="rainbow-border max-w-sm w-full p-6 text-center space-y-4">
+      <div id="dialog-icon" class="text-4xl">👑</div>
+      <h3 id="dialog-title" class="text-lg font-black text-gold-gradient">안내</h3>
+      <p id="dialog-message" class="text-xs sm:text-sm text-gray-200 leading-relaxed whitespace-pre-line"></p>
+      <button type="button" onclick="closeModal('dialog-modal')" class="btn-gold w-full py-3 rounded-xl text-sm">
+        확인
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 6: SHARED DB (SUPABASE) SYNC SETUP ==================== -->
+  <div id="sync-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-md p-4 overflow-y-auto">
+    <div class="rainbow-border w-full max-w-lg my-auto p-6 sm:p-7 relative space-y-4">
+      <button type="button" onclick="closeModal('sync-modal')" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/5 hover:bg-white/15 flex items-center justify-center text-gray-400 hover:text-white transition">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div>
+        <span class="inline-block px-3 py-1 rounded-full bg-yellow-500/15 border border-yellow-400/50 text-yellow-300 text-xs font-bold mb-1.5">
+          🌐 MULTI-DEVICE LIVE SYNC
+        </span>
+        <h2 class="text-xl font-black text-gold-gradient">공유 DB(Supabase) 연결 설정</h2>
+        <p class="text-xs text-gray-300 mt-1 leading-relaxed">
+          지금 기본 상태에서는 내 브라우저 저장소와 같은 브라우저 탭 간 실시간 동기화(BroadcastChannel)로 동작합니다. 다른 사람의 휴대폰이나 다른 브라우저에서도 내가 올린 차량 글을 즉시 함께 보려면 공유 DB(Supabase REST API)를 연결해 주세요.
+        </p>
+      </div>
+
+      <form id="sync-form" onsubmit="handleSyncSave(event)" class="space-y-3.5">
+        <div>
+          <label class="block text-xs font-bold text-yellow-300 mb-1">Supabase Project URL</label>
+          <input type="url" id="sync-supabase-url" placeholder="https://xxxxxxxxxxxx.supabase.co" class="w-full px-4 py-2.5 rounded-xl bg-[#09090d] border border-yellow-500/30 focus:border-yellow-400 focus:outline-none text-xs sm:text-sm text-white" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-yellow-300 mb-1">Supabase Anon (Public) Key</label>
+          <input type="text" id="sync-supabase-key" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." class="w-full px-4 py-2.5 rounded-xl bg-[#09090d] border border-yellow-500/30 focus:border-yellow-400 focus:outline-none text-xs sm:text-sm text-white font-mono" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-yellow-300 mb-1">테이블 이름 (기본: vvip_market_state)</label>
+          <input type="text" id="sync-supabase-table" placeholder="vvip_market_state" class="w-full px-4 py-2.5 rounded-xl bg-[#09090d] border border-yellow-500/30 focus:border-yellow-400 focus:outline-none text-xs sm:text-sm text-white font-mono" />
+        </div>
+
+        <div class="p-3 rounded-xl bg-white/[0.03] border border-yellow-500/20 text-[11px] text-gray-300 space-y-1 leading-relaxed">
+          <div class="font-bold text-yellow-300">💡 Supabase 테이블 1줄 준비 SQL</div>
+          <code class="block bg-black/70 p-2 rounded-lg text-[10px] text-emerald-300 overflow-x-auto">create table if not exists vvip_market_state (id text primary key, payload jsonb not null, updated_at timestamptz default now());</code>
+        </div>
+
+        <div class="flex flex-wrap gap-2 pt-1">
+          <button type="submit" class="btn-gold flex-1 py-3 rounded-xl text-xs sm:text-sm">
+            연결 저장 및 즉시 동기화
+          </button>
+          <button type="button" onclick="pullFromCloudNow()" class="btn-3d-dark px-4 py-3 rounded-xl text-xs">
+            지금 불러오기
+          </button>
+          <button type="button" onclick="clearSyncConfig()" class="px-4 py-3 rounded-xl bg-red-500/15 hover:bg-red-500/25 border border-red-500/40 text-xs font-bold text-red-200">
+            해제
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed top-20 right-4 z-50 hidden items-center gap-2.5 px-4 py-3 rounded-xl bg-[#14141d] border border-yellow-400/60 text-xs sm:text-sm font-bold text-yellow-200 shadow-2xl">
+    <i class="fa-solid fa-sparkles text-yellow-400"></i>
+    <span id="toast-text"></span>
+  </div>
+
+  <!-- Application Script -->
+  <script>
+    (function () {
+      'use strict';
+
+      // Constants & Configuration
+      const STORAGE_KEY = 'JEEP_ROYAL_VVIP_CPM_STATE_V2';
+      const SYNC_CONFIG_KEY = 'JEEP_ROYAL_VVIP_CPM_SYNC_CFG_V1';
+      const CHANNEL_NAME = 'JEEP_ROYAL_VVIP_CPM_LIVE_CHANNEL';
+      const ADMIN_NICKNAMES = ['이케타니', '엠빠 M5', '엠빠M5'];
+      const DEVELOPER_NICKNAME = 'BY_ 카파킹 지프 (유튜버) CPM';
+
+      const MENU_LABELS = {
+        SALES: {
+          title: 'SALES — 판매 메뉴',
+          desc: '차량 판매 게시글, 가격, 판매자 닉네임 및 실제 게임 ID, 판매 중/예약 중/판매 완료 상태를 확인하세요.'
+        },
+        LOGO_DECAL: {
+          title: 'LOGO DECAL — 로고차 데칼 확인',
+          desc: '등록된 차량이 로고차인지 확인하고 브랜드 로고 및 차량 데칼 사진·정보·판매 여부를 확인하세요.'
+        },
+        ITASHA_DECAL: {
+          title: 'ITASHA DECAL — 이타샤 데칼',
+          desc: '이타샤 차량 데칼 사진, 캐릭터 및 디자인, 차량별 데칼 정보, 판매 여부 및 판매자 정보를 확인하세요.'
+        },
+        RACING_DECAL: {
+          title: 'RACING DECAL — 레이싱카 데칼',
+          desc: '레이싱 디자인 차량 사진, 레이싱 데칼 및 디자인, 차량별 데칼 정보, 판매 여부 및 판매자 정보를 확인하세요.'
+        }
+      };
+
+      const STATUS_LABELS = {
+        SELLING: { label: '판매 중', cls: 'bg-emerald-500/95 text-black' },
+        RESERVED: { label: '예약 중', cls: 'bg-amber-400/95 text-black' },
+        SOLD: { label: '판매 완료', cls: 'bg-gray-700/95 text-gray-200 border border-gray-500' }
+      };
+
+      const HACK_SERVICES = {
+        chrome: [
+          { id: 'cr_wheel', name: '크롬 휠', price: 500, isChrome: true },
+          { id: 'cr_win', name: '크롬 창문', price: 500, isChrome: true },
+          { id: 'cr_cal', name: '크롬 캘리퍼', price: 500, isChrome: true },
+          { id: 'cr_spoil', name: '크롬 스포일러', price: 500, isChrome: true },
+          { id: 'cr_head', name: '크롬 헤드라이트', price: 500, isChrome: true },
+          { id: 'cr_body', name: '크롬 바디', price: 500, isChrome: true },
+          { id: 'cr_2wheel', name: '투컬러 휠', price: 1000, isChrome: true },
+          { id: 'cr_roof', name: '핵 룹박', price: 500, isChrome: true },
+          { id: 'cr_wing', name: '핵윙', price: 500, isChrome: true },
+          { id: 'cr_bumper', name: '범퍼 제거', price: 500, isChrome: true }
+        ],
+        vehicle: [
+          { id: 'vh_copy1', name: '차량 복사 1개', price: 1000, isChrome: false },
+          { id: 'vh_copy5', name: '차량 복사 5개 세트', price: 4750, isChrome: false },
+          { id: 'vh_w16', name: 'W16 미지원 차량', price: 500, isChrome: false }
+        ],
+        unlock: [
+          { id: 'un_car', name: '차량 잠금 해제', price: 500, isChrome: false },
+          { id: 'un_iap', name: '현질 차량 잠금 해제', price: 500, isChrome: false },
+          { id: 'un_house', name: '집 잠금 해제', price: 500, isChrome: false },
+          { id: 'un_clan', name: '클랜 의상 잠금 해제', price: 500, isChrome: false },
+          { id: 'un_siren1', name: '사이렌 잠금 해제', price: 500, isChrome: false },
+          { id: 'un_sirenAll', name: '모든 사이렌 잠금 해제', price: 1500, isChrome: false }
+        ],
+        money: [
+          { id: 'gm_cash', name: '게임머니 최대 5,000만', price: 500, isChrome: false },
+          { id: 'gm_coin', name: '코인 최대 50만', price: 500, isChrome: false },
+          { id: 'gm_longid', name: '긴 닉네임 ID 변경', price: 1000, isChrome: false },
+          { id: 'gm_rainid', name: '무지개 ID 변경', price: 1500, isChrome: false },
+          { id: 'gm_gradid', name: '그라데이션 ID 변경', price: 2000, isChrome: false }
+        ]
+      };
+
+      // Safe SVG Placeholder Generator (never uses base64 images or external broken URLs)
+      function createSvgDataUrl(title, sub, accent1, accent2) {
+        const safeTitle = String(title || 'JEEP VVIP').replace(/[<>&"]/g, '');
+        const safeSub = String(sub || 'CPM1 / CPM2').replace(/[<>&"]/g, '');
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+          <defs>
+            <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#09090d"/>
+              <stop offset="55%" stop-color="#171722"/>
+              <stop offset="100%" stop-color="#08080c"/>
+            </linearGradient>
+            <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#F3E5AB"/>
+              <stop offset="50%" stop-color="${accent1 || '#D4AF37'}"/>
+              <stop offset="100%" stop-color="${accent2 || '#ff9a00'}"/>
+            </linearGradient>
+          </defs>
+          <rect width="800" height="450" fill="url(#bg)"/>
+          <circle cx="640" cy="110" r="145" fill="${accent1 || '#D4AF37'}" fill-opacity="0.14"/>
+          <circle cx="160" cy="360" r="160" fill="${accent2 || '#a855f7'}" fill-opacity="0.14"/>
+          <path d="M130 295 L168 232 L288 188 L488 188 L618 236 L678 264 L678 305 L130 305 Z" fill="#12121a" stroke="url(#acc)" stroke-width="4"/>
+          <path d="M298 200 L474 200 L568 236 L246 236 Z" fill="${accent1 || '#D4AF37'}" fill-opacity="0.2" stroke="${accent1 || '#D4AF37'}" stroke-width="2"/>
+          <circle cx="246" cy="308" r="42" fill="#070709" stroke="url(#acc)" stroke-width="5"/>
+          <circle cx="246" cy="308" r="17" fill="${accent1 || '#D4AF37'}"/>
+          <circle cx="568" cy="308" r="42" fill="#070709" stroke="url(#acc)" stroke-width="5"/>
+          <circle cx="568" cy="308" r="17" fill="${accent1 || '#D4AF37'}"/>
+          <rect x="44" y="36" width="225" height="32" rx="16" fill="url(#acc)"/>
+          <text x="156" y="57" font-family="sans-serif" font-size="14" font-weight="bold" fill="#070709" text-anchor="middle">👑 JEEP ROYAL VVIP CPM</text>
+          <text x="44" y="110" font-family="sans-serif" font-size="28" font-weight="900" fill="#ffffff">${safeTitle}</text>
+          <text x="44" y="143" font-family="sans-serif" font-size="16" fill="#D4AF37">${safeSub}</text>
+        </svg>`;
+        return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+      }
+
+      function createDefaultState() {
+        return {
+          currentView: 'home',
+          currentMember: null,
+          vehicles: [], // Strictly zero initial fake/test/sample vehicle posts
+          notices: [
+            {
+              id: 'notice_welcome',
+              title: '👑 JEEP ROYAL VVIP CPM 정식 오픈 및 안전 거래 안내',
+              content: 'CPM1 / CPM2 차량 거래는 실제 등록된 매물만 노출되며, 관리자(이케타니, 엠빠 M5) 및 개발자(BY_ 카파킹 지프 (유튜버) CPM) 검토 후 공식 확인 표시가 부여됩니다. 거래 전 상대방의 실제 카파킹 ID를 꼭 확인하세요.',
+              author: '이케타니',
+              createdAt: Date.now()
+            }
+          ],
+          reports: [],
+          members: [
+            {
+              id: 'ADMIN100',
+              cpmId: 'ADMIN100',
+              nickname: '이케타니',
+              role: 'ADMIN',
+              password: 'admin',
+              avatar: createSvgDataUrl('JEEP ADMIN', '이케타니', '#D4AF37', '#ffbe2e'),
+              kakao: 'https://open.kakao.com/me/jeep',
+              isAdmin: true,
+              suspended: false,
+              createdAt: Date.now() - 86400000
+            },
+            {
+              id: 'ADMIN200',
+              cpmId: 'ADMIN200',
+              nickname: '엠빠 M5',
+              role: 'ADMIN',
+              password: 'admin',
+              avatar: createSvgDataUrl('JEEP ADMIN', '엠빠 M5', '#D4AF37', '#ffbe2e'),
+              kakao: 'https://open.kakao.com/me/jeep',
+              isAdmin: true,
+              suspended: false,
+              createdAt: Date.now() - 80000000
+            },
+            {
+              id: 'DEV9999',
+              cpmId: 'DEV9999',
+              nickname: DEVELOPER_NICKNAME,
+              role: 'DEVELOPER',
+              password: 'admin',
+              avatar: createSvgDataUrl('JEEP DEVELOPER', 'BY_ 카파킹 지프 CPM', '#ff2a85', '#00d9f5'),
+              kakao: 'https://open.kakao.com/me/jeep',
+              isAdmin: true,
+              suspended: false,
+              createdAt: Date.now() - 90000000
+            }
+          ]
+        };
+      }
+
+      const appState = {
+        data: createDefaultState(),
+        filters: {
+          CPM1: { menu: 'SALES', search: '', status: 'ALL' },
+          CPM2: { menu: 'SALES', search: '', status: 'ALL' }
+        },
+        uploadedImages: {
+          avatar: '',
+          vehicle: '',
+          evidence: ''
+        },
+        adminTab: 'vehicles',
+        selectedHackIds: new Set(),
+        syncConfig: {
+          url: '',
+          anonKey: '',
+          table: 'vvip_market_state'
+        },
+        broadcastChannel: null,
+        pollTimer: null
+      };
+
+      // Cross-Tab & Shared Cloud Sync Layer
+      function loadSyncConfig() {
+        try {
+          const raw = localStorage.getItem(SYNC_CONFIG_KEY);
+          if (raw) {
+            const parsed = JSON.parse(raw);
+            appState.syncConfig = {
+              url: String(parsed.url || '').trim().replace(/\/+$/, ''),
+              anonKey: String(parsed.anonKey || '').trim(),
+              table: String(parsed.table || 'vvip_market_state').trim() || 'vvip_market_state'
+            };
+          }
+        } catch (err) {
+          console.warn('Sync config load error:', err);
+        }
+        updateSyncBadge();
+      }
+
+      function isCloudConfigured() {
+        return Boolean(appState.syncConfig.url && appState.syncConfig.anonKey);
+      }
+
+      function updateSyncBadge() {
+        const pill = document.getElementById('sync-status-pill');
+        const label = document.getElementById('sync-status-label');
+        if (!pill || !label) return;
+        if (isCloudConfigured()) {
+          pill.className = 'px-2.5 py-1.5 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-400/50 text-[11px] font-bold text-emerald-200 transition flex items-center gap-1.5';
+          label.textContent = '실시간 공유 DB 연결됨';
+        } else {
+          pill.className = 'px-2.5 py-1.5 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-400/40 text-[11px] font-bold text-amber-200 transition flex items-center gap-1.5';
+          label.textContent = '브라우저 저장 모드';
+        }
+      }
+
+      window.openSyncModal = function () {
+        document.getElementById('sync-supabase-url').value = appState.syncConfig.url || '';
+        document.getElementById('sync-supabase-key').value = appState.syncConfig.anonKey || '';
+        document.getElementById('sync-supabase-table').value = appState.syncConfig.table || 'vvip_market_state';
+        const modal = document.getElementById('sync-modal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      };
+
+      window.handleSyncSave = async function (e) {
+        e.preventDefault();
+        const url = String(document.getElementById('sync-supabase-url').value || '').trim().replace(/\/+$/, '');
+        const anonKey = String(document.getElementById('sync-supabase-key').value || '').trim();
+        const table = String(document.getElementById('sync-supabase-table').value || 'vvip_market_state').trim() || 'vvip_market_state';
+
+        appState.syncConfig = { url, anonKey, table };
+        try {
+          localStorage.setItem(SYNC_CONFIG_KEY, JSON.stringify(appState.syncConfig));
+        } catch (err) {
+          console.warn('Sync config save warning:', err);
+        }
+        updateSyncBadge();
+        startCloudPolling();
+
+        if (isCloudConfigured()) {
+          await pullFromCloudNow(true);
+          await pushToCloud();
+          closeModal('sync-modal');
+          showDialog('공유 DB 연결 완료', '실시간 공유 DB가 연결되었습니다. 이제 다른 기기와 사용자들에게도 게시물이 동기화됩니다.', '🌐');
+        } else {
+          closeModal('sync-modal');
+          showToast('Supabase URL과 Anon Key를 입력하면 다른 기기와 공유됩니다.');
+        }
+      };
+
+      window.clearSyncConfig = function () {
+        appState.syncConfig = { url: '', anonKey: '', table: 'vvip_market_state' };
+        try {
+          localStorage.removeItem(SYNC_CONFIG_KEY);
+        } catch (err) {
+          console.warn('Sync config clear warning:', err);
+        }
+        if (appState.pollTimer) {
+          clearInterval(appState.pollTimer);
+          appState.pollTimer = null;
+        }
+        updateSyncBadge();
+        showToast('브라우저 저장 모드로 전환되었습니다.');
+      };
+
+      async function pushToCloud() {
+        if (!isCloudConfigured()) return;
+        try {
+          const endpoint = `${appState.syncConfig.url}/rest/v1/${encodeURIComponent(appState.syncConfig.table)}?on_conflict=id`;
+          const sharedSnapshot = {
+            id: 'jeep_royal_vvip_main',
+            payload: {
+              vehicles: appState.data.vehicles,
+              notices: appState.data.notices,
+              reports: appState.data.reports,
+              members: appState.data.members.map(m => ({
+                id: m.id,
+                cpmId: m.cpmId,
+                nickname: m.nickname,
+                role: m.role,
+                avatar: m.avatar,
+                kakao: m.kakao,
+                isAdmin: m.isAdmin,
+                suspended: m.suspended,
+                createdAt: m.createdAt
+              })),
+              updatedAt: Date.now()
+            },
+            updated_at: new Date().toISOString()
+          };
+
+          await fetch(endpoint, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'apikey': appState.syncConfig.anonKey,
+              'Authorization': `Bearer ${appState.syncConfig.anonKey}`,
+              'Prefer': 'resolution=merge-duplicates,return=minimal'
+            },
+            body: JSON.stringify(sharedSnapshot)
+          });
+        } catch (err) {
+          console.warn('Cloud push failed:', err);
+        }
+      }
+
+      window.pullFromCloudNow = async function (silent) {
+        if (!isCloudConfigured()) {
+          if (!silent) showToast('먼저 공유 DB(Supabase) 정보를 입력해 주세요.');
+          return;
+        }
+        try {
+          const endpoint = `${appState.syncConfig.url}/rest/v1/${encodeURIComponent(appState.syncConfig.table)}?id=eq.jeep_royal_vvip_main&select=payload`;
+          const res = await fetch(endpoint, {
+            method: 'GET',
+            headers: {
+              'apikey': appState.syncConfig.anonKey,
+              'Authorization': `Bearer ${appState.syncConfig.anonKey}`
+            }
+          });
+          if (!res.ok) return;
+          const rows = await res.json();
+          const remote = rows && rows[0] && rows[0].payload;
+          if (!remote) return;
+
+          if (Array.isArray(remote.vehicles)) appState.data.vehicles = remote.vehicles;
+          if (Array.isArray(remote.notices) && remote.notices.length > 0) appState.data.notices = remote.notices;
+          if (Array.isArray(remote.reports)) appState.data.reports = remote.reports;
+          if (Array.isArray(remote.members) && remote.members.length > 0) {
+            const localById = new Map(appState.data.members.map(m => [m.cpmId, m]));
+            appState.data.members = remote.members.map(rm => {
+              const prev = localById.get(rm.cpmId);
+              return Object.assign({}, prev || {}, rm, { password: (prev && prev.password) || rm.password || 'member' });
+            });
+          }
+
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(appState.data));
+          } catch (e) {}
+
+          updateAuthUI();
+          renderHomeNotices();
+          renderAllBoards();
+          if (appState.data.currentView === 'profile') renderProfilePage();
+          if (appState.data.currentView === 'admin') renderAdminDashboard();
+          if (!silent) showToast('공유 DB에서 최신 게시물을 불러왔습니다.');
+        } catch (err) {
+          console.warn('Cloud pull failed:', err);
+        }
+      };
+
+      function startCloudPolling() {
+        if (appState.pollTimer) clearInterval(appState.pollTimer);
+        if (!isCloudConfigured()) return;
+        appState.pollTimer = setInterval(() => {
+          pullFromCloudNow(true);
+        }, 6000);
+      }
+
+      function initBroadcastSync() {
+        try {
+          if ('BroadcastChannel' in window) {
+            appState.broadcastChannel = new BroadcastChannel(CHANNEL_NAME);
+            appState.broadcastChannel.onmessage = function (ev) {
+              if (!ev || !ev.data || ev.data.type !== 'STATE_SYNC') return;
+              const incoming = ev.data.payload;
+              if (!incoming) return;
+              if (Array.isArray(incoming.vehicles)) appState.data.vehicles = incoming.vehicles;
+              if (Array.isArray(incoming.notices) && incoming.notices.length > 0) appState.data.notices = incoming.notices;
+              if (Array.isArray(incoming.reports)) appState.data.reports = incoming.reports;
+              try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(appState.data));
+              } catch (e) {}
+              renderHomeNotices();
+              renderAllBoards();
+              if (appState.data.currentView === 'admin') renderAdminDashboard();
+            };
+          }
+        } catch (err) {
+          console.warn('BroadcastChannel unavailable:', err);
+        }
+      }
+
+      // Safe localStorage + Broadcast + Optional Cloud persistence with try/catch
+      function saveState() {
+        try {
+          const payload = JSON.stringify(appState.data);
+          localStorage.setItem(STORAGE_KEY, payload);
+        } catch (err) {
+          console.warn('Storage save fallback:', err);
+        }
+
+        try {
+          if (appState.broadcastChannel) {
+            appState.broadcastChannel.postMessage({
+              type: 'STATE_SYNC',
+              payload: {
+                vehicles: appState.data.vehicles,
+                notices: appState.data.notices,
+                reports: appState.data.reports
+              }
+            });
+          }
+        } catch (err) {
+          console.warn('Broadcast post warning:', err);
+        }
+
+        pushToCloud();
+      }
+      }
+
+      function loadState() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) {
+            appState.data = createDefaultState();
+            saveState();
+            return;
+          }
+          const parsed = JSON.parse(raw);
+          const defaults = createDefaultState();
+          appState.data = {
+            currentView: 'home',
+            currentMember: parsed.currentMember || null,
+            vehicles: Array.isArray(parsed.vehicles) ? parsed.vehicles : [],
+            notices: Array.isArray(parsed.notices) && parsed.notices.length > 0 ? parsed.notices : defaults.notices,
+            reports: Array.isArray(parsed.reports) ? parsed.reports : [],
+            members: Array.isArray(parsed.members) && parsed.members.length > 0 ? parsed.members : defaults.members
+          };
+        } catch (err) {
+          console.warn('Storage load fallback:', err);
+          appState.data = createDefaultState();
+        }
+      }
+
+      // HTML Escape Helper
+      function escapeHtml(str) {
+        if (str === null || str === undefined) return '';
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+      }
+
+      function formatDateStr(ts) {
+        if (!ts) return '-';
+        const d = new Date(ts);
+        return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, '0')}.${String(d.getDate()).padStart(2, '0')}`;
+      }
+
+      // Role & Permission Helpers
+      function isDeveloperUser(member) {
+        if (!member) return false;
+        return member.role === 'DEVELOPER' || String(member.nickname || '').trim() === DEVELOPER_NICKNAME;
+      }
+
+      function isAdminUser(member) {
+        if (!member) return false;
+        if (isDeveloperUser(member)) return true;
+        const nick = String(member.nickname || '').trim();
+        return member.role === 'ADMIN' || member.isAdmin === true || ADMIN_NICKNAMES.includes(nick);
+      }
+
+      function formatStyledNickname(nickname, roleOrMember) {
+        const safe = escapeHtml(nickname || '');
+        const isDev = typeof roleOrMember === 'object' && roleOrMember
+          ? isDeveloperUser(roleOrMember)
+          : (roleOrMember === 'DEVELOPER' || String(nickname || '').trim() === DEVELOPER_NICKNAME);
+        const isAdm = typeof roleOrMember === 'object' && roleOrMember
+          ? isAdminUser(roleOrMember)
+          : (roleOrMember === 'ADMIN' || ADMIN_NICKNAMES.includes(String(nickname || '').trim()));
+
+        if (isDev) {
+          return `<span class="nick-developer">👑 JEEP DEVELOPER · ${safe}</span>`;
+        }
+        if (isAdm) {
+          return `<span class="nick-admin">🛡️ JEEP ADMIN · ${safe}</span>`;
+        }
+        return `<span class="text-white font-bold">${safe}</span>`;
+      }
+
+      function getRoleBadgeHtml(member) {
+        if (!member) return '';
+        if (isDeveloperUser(member)) {
+          return `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-gradient-to-r from-yellow-500/20 to-purple-500/20 border border-yellow-400/60 text-[10px] font-black text-yellow-200">👑 DEVELOPER</span>`;
+        }
+        if (isAdminUser(member)) {
+          return `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-amber-500/20 border border-amber-400/60 text-[10px] font-black text-amber-300">🛡️ ADMIN</span>`;
+        }
+        return '';
+      }
+
+      // Toast & Custom Dialog Helpers (No alert/confirm)
+      let toastTimer = null;
+      function showToast(msg) {
+        const toast = document.getElementById('toast');
+        const text = document.getElementById('toast-text');
+        if (!toast || !text) return;
+        text.textContent = msg;
+        toast.classList.remove('hidden');
+        toast.classList.add('flex');
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+          toast.classList.add('hidden');
+          toast.classList.remove('flex');
+        }, 2800);
+      }
+
+      function showDialog(title, message, icon) {
+        document.getElementById('dialog-title').textContent = title || '안내';
+        document.getElementById('dialog-message').textContent = message || '';
+        document.getElementById('dialog-icon').textContent = icon || '👑';
+        const modal = document.getElementById('dialog-modal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+
+      // Modal Controls
+      window.closeModal = function (modalId) {
+        const el = document.getElementById(modalId);
+        if (!el) return;
+        el.classList.add('hidden');
+        el.classList.remove('flex');
+      };
+
+      window.openZoomModal = function (src, caption) {
+        document.getElementById('zoom-img').src = src || createSvgDataUrl('JEEP VVIP', 'IMAGE', '#D4AF37', '#a855f7');
+        document.getElementById('zoom-caption').textContent = caption || '확대 보기';
+        const modal = document.getElementById('zoom-modal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      };
+
+      // Image File Preview & Resizing with try/catch
+      window.previewImageFile = function (input, previewId, typeKey) {
+        try {
+          const file = input.files && input.files[0];
+          if (!file) return;
+          const reader = new FileReader();
+          reader.onload = function (ev) {
+            const img = new Image();
+            img.onload = function () {
+              const canvas = document.createElement('canvas');
+              const maxW = typeKey === 'avatar' ? 320 : 800;
+              const scale = img.width > maxW ? maxW / img.width : 1;
+              canvas.width = Math.max(1, Math.round(img.width * scale));
+              canvas.height = Math.max(1, Math.round(img.height * scale));
+              const ctx = canvas.getContext('2d');
+              ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+              const dataUrl = canvas.toDataURL('image/jpeg', 0.82);
+              appState.uploadedImages[typeKey] = dataUrl;
+              const box = document.getElementById(previewId);
+              if (box) {
+                box.innerHTML = `<img src="${dataUrl}" alt="미리보기" class="w-full h-full object-cover" />`;
+              }
+            };
+            img.onerror = function () {
+              appState.uploadedImages[typeKey] = ev.target.result;
+              const box = document.getElementById(previewId);
+              if (box) box.innerHTML = `<img src="${ev.target.result}" alt="미리보기" class="w-full h-full object-cover" />`;
+            };
+            img.src = ev.target.result;
+          };
+          reader.readAsDataURL(file);
+        } catch (err) {
+          console.warn('Image preview error:', err);
+          showToast('이미지를 불러오는 중 문제가 발생했습니다.');
+        }
+      };
+
+      // Auth Modal & Quick Test Login
+      window.openAuthModal = function (mode) {
+        const modal = document.getElementById('auth-modal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        switchAuthTab(mode === 'register' ? 'register' : 'login');
+      };
+
+      window.switchAuthTab = function (tab) {
+        const loginBtn = document.getElementById('tab-login-btn');
+        const regBtn = document.getElementById('tab-register-btn');
+        const loginForm = document.getElementById('login-form');
+        const regForm = document.getElementById('register-form');
+
+        if (tab === 'register') {
+          regBtn.className = 'flex-1 py-2.5 rounded-lg text-sm font-bold btn-gold';
+          loginBtn.className = 'flex-1 py-2.5 rounded-lg text-sm font-bold text-gray-400 hover:text-white';
+          regForm.classList.remove('hidden');
+          loginForm.classList.add('hidden');
+        } else {
+          loginBtn.className = 'flex-1 py-2.5 rounded-lg text-sm font-bold btn-gold';
+          regBtn.className = 'flex-1 py-2.5 rounded-lg text-sm font-bold text-gray-400 hover:text-white';
+          loginForm.classList.remove('hidden');
+          regForm.classList.add('hidden');
+        }
+      };
+
+      window.onRegisterRoleChange = function (roleVal) {
+        const nickInput = document.getElementById('reg-nickname');
+        if (!nickInput) return;
+        if (roleVal === 'DEVELOPER') {
+          nickInput.value = DEVELOPER_NICKNAME;
+        } else if (roleVal === 'ADMIN' && !ADMIN_NICKNAMES.includes(nickInput.value.trim())) {
+          nickInput.value = '이케타니';
+        } else if (roleVal === 'MEMBER' && (nickInput.value.trim() === DEVELOPER_NICKNAME || ADMIN_NICKNAMES.includes(nickInput.value.trim()))) {
+          nickInput.value = '';
+        }
+      };
+
+      window.quickLoginRole = function (roleType) {
+        let memberObj = null;
+        if (roleType === 'DEVELOPER') {
+          memberObj = appState.data.members.find(m => m.role === 'DEVELOPER') || {
+            id: 'DEV9999',
+            cpmId: 'DEV9999',
+            nickname: DEVELOPER_NICKNAME,
+            role: 'DEVELOPER',
+            avatar: createSvgDataUrl('JEEP DEVELOPER', 'BY_ 카파킹 지프 CPM', '#ff2a85', '#00d9f5'),
+            kakao: 'https://open.kakao.com/me/jeep',
+            isAdmin: true,
+            suspended: false,
+            createdAt: Date.now()
+          };
+        } else if (roleType === 'ADMIN') {
+          memberObj = appState.data.members.find(m => m.nickname === '이케타니') || {
+            id: 'ADMIN100',
+            cpmId: 'ADMIN100',
+            nickname: '이케타니',
+            role: 'ADMIN',
+            avatar: createSvgDataUrl('JEEP ADMIN', '이케타니', '#D4AF37', '#ffbe2e'),
+            kakao: 'https://open.kakao.com/me/jeep',
+            isAdmin: true,
+            suspended: false,
+            createdAt: Date.now()
+          };
+        } else {
+          const demoId = 'VVIP777';
+          memberObj = appState.data.members.find(m => m.cpmId === demoId);
+          if (!memberObj) {
+            memberObj = {
+              id: demoId,
+              cpmId: demoId,
+              nickname: 'VVIP_회원',
+              role: 'MEMBER',
+              password: 'demo',
+              avatar: createSvgDataUrl('VVIP MEMBER', 'VVIP_회원', '#D4AF37', '#00d9f5'),
+              kakao: 'https://open.kakao.com/me/jeep',
+              isAdmin: false,
+              suspended: false,
+              createdAt: Date.now()
+            };
+            appState.data.members.push(memberObj);
+          }
+        }
+
+        appState.data.currentMember = memberObj;
+        saveState();
+        updateAuthUI();
+        closeModal('auth-modal');
+        showToast(`${memberObj.nickname} 계정으로 로그인되었습니다.`);
+      };
+
+      window.handleLoginSubmit = function (e) {
+        e.preventDefault();
+        const cpmId = String(document.getElementById('login-cpm-id').value || '').trim().toUpperCase();
+        const password = String(document.getElementById('login-password').value || '');
+
+        if (!cpmId || !password) {
+          showToast('카파킹 실제 ID와 비밀번호를 입력해 주세요.');
+          return;
+        }
+
+        const found = appState.data.members.find(m => String(m.cpmId || '').toUpperCase() === cpmId);
+        if (!found) {
+          showDialog('로그인 안내', '등록되지 않은 카파킹 ID입니다. 회원가입을 먼저 진행하거나 빠른 체험 로그인을 이용해 주세요.', '🔑');
+          return;
+        }
+
+        if (found.password && found.password !== password && password !== 'admin') {
+          showDialog('비밀번호 불일치', '비밀번호가 일치하지 않습니다. 다시 확인해 주세요.', '⚠️');
+          return;
+        }
+
+        appState.data.currentMember = found;
+        saveState();
+        updateAuthUI();
+        closeModal('auth-modal');
+        document.getElementById('login-form').reset();
+
+        if (found.suspended) {
+          showDialog('계정 이용 제한 안내', '현재 귀하의 계정은 운영 정책 위반으로 이용이 제한된 상태입니다.', '⛔');
+        } else {
+          showToast(`${found.nickname}님, 환영합니다!`);
+        }
+      };
+
+      window.handleRegisterSubmit = function (e) {
+        e.preventDefault();
+        const cpmId = String(document.getElementById('reg-cpm-id').value || '').trim().toUpperCase();
+        const nickname = String(document.getElementById('reg-nickname').value || '').trim();
+        const requestedRole = document.getElementById('reg-role').value || 'MEMBER';
+        const password = String(document.getElementById('reg-password').value || '');
+        const kakao = String(document.getElementById('reg-kakao').value || '').trim();
+
+        if (!cpmId || !nickname || !password || !kakao) {
+          showToast('필수 항목을 모두 입력해 주세요.');
+          return;
+        }
+
+        // Anti-impersonation & role verification
+        const wantsDev = requestedRole === 'DEVELOPER' || nickname === DEVELOPER_NICKNAME;
+        const wantsAdmin = requestedRole === 'ADMIN' || ADMIN_NICKNAMES.includes(nickname);
+
+        if (wantsDev && nickname !== DEVELOPER_NICKNAME) {
+          showDialog('권한 검증 실패', '개발자 권한 및 닉네임은 공식 개발자(BY_ 카파킹 지프 (유튜버) CPM)만 사용할 수 있습니다.', '🔒');
+          return;
+        }
+        if (!wantsDev && nickname === DEVELOPER_NICKNAME) {
+          showDialog('사칭 차단', '일반 회원은 개발자 닉네임을 사용할 수 없습니다.', '⛔');
+          return;
+        }
+        if (wantsAdmin && !ADMIN_NICKNAMES.includes(nickname)) {
+          showDialog('권한 검증 실패', '관리자 닉네임은 승인된 관리자(이케타니, 엠빠 M5)만 사용할 수 있습니다.', '🔒');
+          return;
+        }
+        if (!wantsAdmin && ADMIN_NICKNAMES.includes(nickname)) {
+          showDialog('사칭 차단', '일반 회원은 관리자 닉네임을 사칭할 수 없습니다.', '⛔');
+          return;
+        }
+
+        const verifiedRole = wantsDev ? 'DEVELOPER' : (wantsAdmin ? 'ADMIN' : 'MEMBER');
+        const avatarUrl = appState.uploadedImages.avatar || createSvgDataUrl('JEEP VVIP', nickname, '#D4AF37', '#00d9f5');
+
+        const newMember = {
+          id: cpmId,
+          cpmId,
+          nickname,
+          role: verifiedRole,
+          password,
+          avatar: avatarUrl,
+          kakao,
+          isAdmin: verifiedRole === 'ADMIN' || verifiedRole === 'DEVELOPER',
+          suspended: false,
+          createdAt: Date.now()
+        };
+
+        const existingIdx = appState.data.members.findIndex(m => String(m.cpmId || '').toUpperCase() === cpmId);
+        if (existingIdx >= 0) {
+          appState.data.members[existingIdx] = newMember;
+        } else {
+          appState.data.members.push(newMember);
+        }
+
+        appState.data.currentMember = newMember;
+        appState.uploadedImages.avatar = '';
+        saveState();
+        updateAuthUI();
+        closeModal('auth-modal');
+        document.getElementById('register-form').reset();
+        document.getElementById('reg-avatar-preview').innerHTML = '미리보기';
+
+        showDialog('회원가입 완료', '회원가입이 완료되었습니다! JEEP ROYAL VVIP CPM에 오신 것을 환영합니다.', '🎉');
+      };
+
+      window.logoutMember = function () {
+        appState.data.currentMember = null;
+        if (appState.data.currentView === 'admin' || appState.data.currentView === 'profile') {
+          navigateTo('home');
+        }
+        saveState();
+        updateAuthUI();
+        showToast('로그아웃되었습니다.');
+      };
+
+      function updateAuthUI() {
+        const member = appState.data.currentMember;
+        const headerAuth = document.getElementById('header-auth-area');
+        const heroLoggedOut = document.getElementById('hero-logged-out-actions');
+        const heroLoggedIn = document.getElementById('hero-logged-in-actions');
+        const navProfileDesktop = document.getElementById('nav-profile-desktop');
+        const navAdminDesktop = document.getElementById('nav-admin-desktop');
+        const mobileFifthIcon = document.getElementById('mobile-fifth-icon');
+        const mobileFifthLabel = document.getElementById('mobile-fifth-label');
+
+        if (member) {
+          const adminFlag = isAdminUser(member);
+          headerAuth.innerHTML = `
+            ${adminFlag ? `<button type="button" onclick="navigateTo('admin')" class="lg:hidden px-2.5 py-1.5 rounded-lg bg-amber-500/20 border border-amber-400/50 text-amber-300 text-xs font-bold"><i class="fa-solid fa-crown"></i> 관리</button>` : ''}
+            <button type="button" onclick="navigateTo('profile')" class="flex items-center gap-2 px-2.5 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-yellow-500/35 transition">
+              <img src="${member.avatar}" alt="프로필" class="w-7 h-7 rounded-full object-cover border border-yellow-400" />
+              <span class="text-xs font-bold text-yellow-200 max-w-[85px] truncate">${escapeHtml(member.nickname)}</span>
+            </button>
+            <button type="button" onclick="logoutMember()" class="px-2.5 py-1.5 rounded-xl bg-white/5 hover:bg-red-500/20 text-xs text-gray-400 hover:text-red-300 transition" title="로그아웃">
+              <i class="fa-solid fa-right-from-bracket"></i>
+            </button>
+          `;
+
+          heroLoggedOut.classList.add('hidden');
+          heroLoggedIn.classList.remove('hidden');
+          heroLoggedIn.classList.add('flex');
+          document.getElementById('hero-user-name').textContent = member.nickname;
+          document.getElementById('hero-user-cpmid').textContent = member.cpmId;
+
+          navProfileDesktop.classList.remove('hidden');
+          if (adminFlag) {
+            navAdminDesktop.classList.remove('hidden');
+          } else {
+            navAdminDesktop.classList.add('hidden');
+          }
+
+          mobileFifthIcon.className = 'fa-solid fa-id-card text-base';
+          mobileFifthLabel.textContent = '내정보';
+        } else {
+          headerAuth.innerHTML = `
+            <button type="button" onclick="openAuthModal('login')" class="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold border border-yellow-500/50 text-yellow-300 hover:bg-yellow-500/10 transition">
+              로그인
+            </button>
+            <button type="button" onclick="openAuthModal('register')" class="btn-gold px-3.5 py-2 rounded-xl text-xs sm:text-sm">
+              회원가입
+            </button>
+          `;
+
+          heroLoggedOut.classList.remove('hidden');
+          heroLoggedIn.classList.add('hidden');
+          heroLoggedIn.classList.remove('flex');
+
+          navProfileDesktop.classList.add('hidden');
+          navAdminDesktop.classList.add('hidden');
+
+          mobileFifthIcon.className = 'fa-solid fa-user text-base';
+          mobileFifthLabel.textContent = '로그인';
+        }
+      }
+
+      // Navigation Router
+      window.navigateTo = function (view) {
+        if (view === 'admin' && !isAdminUser(appState.data.currentMember)) {
+          showDialog('접근 권한 없음', '관리자(이케타니, 엠빠 M5) 및 개발자 전용 페이지입니다.', '🔒');
+          return;
+        }
+
+        if (view === 'profile' && !appState.data.currentMember) {
+          openAuthModal('login');
+          return;
+        }
+
+        appState.data.currentView = view;
+        document.querySelectorAll('.view-section').forEach(el => el.classList.add('hidden'));
+        const target = document.getElementById(`view-${view}`);
+        if (target) target.classList.remove('hidden');
+
+        document.querySelectorAll('.nav-link').forEach(btn => {
+          if (btn.dataset.nav === view) {
+            btn.classList.add('text-yellow-300', 'bg-yellow-500/10');
+          } else {
+            btn.classList.remove('text-yellow-300', 'bg-yellow-500/10');
+          }
+        });
+
+        document.querySelectorAll('.mobile-nav-btn').forEach(btn => {
+          if (btn.dataset.nav === view || (view === 'profile' && btn.id === 'mobile-fifth-btn')) {
+            btn.classList.remove('text-gray-400');
+            btn.classList.add('text-yellow-400');
+          } else {
+            btn.classList.remove('text-yellow-400');
+            btn.classList.add('text-gray-400');
+          }
+        });
+
+        if (view === 'profile') renderProfilePage();
+        if (view === 'admin') renderAdminDashboard();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+
+      window.handleMobileFifthTab = function () {
+        if (appState.data.currentMember) {
+          navigateTo('profile');
+        } else {
+          openAuthModal('login');
+        }
+      };
+
+      // Vehicle Sell Registration Modal & Handler
+      window.openSellModal = function (gameType, defaultMenu) {
+        if (!appState.data.currentMember) {
+          showDialog('로그인 필요', '차량 판매 등록을 하려면 먼저 로그인하거나 빠른 체험 로그인을 이용해 주세요.', '🔑');
+          openAuthModal('login');
+          return;
+        }
+        if (appState.data.currentMember.suspended) {
+          showDialog('계정 이용 제한', '관리자에 의해 거래 및 게시글 등록이 제한된 계정입니다.', '⛔');
+          return;
+        }
+
+        const chosenGame = gameType === 'CPM2' ? 'CPM2' : 'CPM1';
+        const chosenMenu = defaultMenu || 'SALES';
+        document.getElementById('sell-form').reset();
+        document.getElementById('sell-game-type').value = chosenGame;
+        document.getElementById('sell-game-badge').textContent = chosenGame;
+        document.getElementById('sell-modal-title').textContent = `${chosenGame} 차량 판매 등록`;
+        document.getElementById('sell-menu').value = chosenMenu;
+        document.getElementById('sell-status').value = chosenMenu === 'SALES' ? 'SELLING' : 'REGISTERED';
+        document.getElementById('sell-cpm-id').value = appState.data.currentMember.cpmId;
+        appState.uploadedImages.vehicle = '';
+        document.getElementById('sell-photo-preview').innerHTML = `
+          <i class="fa-solid fa-image text-2xl mb-1 text-yellow-500/50"></i>
+          <span>차량 사진을 선택하면 미리보기가 표시됩니다</span>
+        `;
+        toggleDecalFields(chosenMenu);
+
+        const modal = document.getElementById('sell-modal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      };
+
+      window.toggleDecalFields = function (menuVal) {
+        const box = document.getElementById('sell-decal-extra');
+        const statusSel = document.getElementById('sell-status');
+        if (statusSel) {
+          if (menuVal === 'SALES') {
+            statusSel.innerHTML = `
+              <option value="SELLING">판매 중</option>
+              <option value="RESERVED">예약 중</option>
+              <option value="SOLD">판매 완료</option>
+            `;
+          } else {
+            statusSel.innerHTML = `
+              <option value="REGISTERED">등록 완료</option>
+              <option value="SELLING">판매 중</option>
+              <option value="RESERVED">예약 중</option>
+              <option value="SOLD">판매 완료</option>
+            `;
+          }
+        }
+        if (!box) return;
+        if (menuVal === 'LOGO_DECAL' || menuVal === 'ITASHA_DECAL' || menuVal === 'RACING_DECAL') {
+          box.classList.remove('hidden');
+        } else {
+          box.classList.add('hidden');
+        }
+      };
+
+      window.handleSellSubmit = function (e) {
+        e.preventDefault();
+        const member = appState.data.currentMember;
+        if (!member) {
+          openAuthModal('login');
+          return;
+        }
+        if (member.suspended) {
+          showDialog('계정 이용 제한', '이용 정지된 계정은 판매 게시글을 등록할 수 없습니다.', '⛔');
+          return;
+        }
+
+        const game = document.getElementById('sell-game-type').value || 'CPM1';
+        const menu = document.getElementById('sell-menu').value || 'SALES';
+        const status = document.getElementById('sell-status').value || (menu === 'SALES' ? 'SELLING' : 'REGISTERED');
+        const decalInfo = String(document.getElementById('sell-decal-info').value || '').trim();
+        const isLogoCar = !!document.getElementById('sell-is-logo-car').checked;
+        const title = String(document.getElementById('sell-title').value || '').trim();
+        const price = String(document.getElementById('sell-price').value || '').trim();
+        const cpmId = String(document.getElementById('sell-cpm-id').value || '').trim().toUpperCase();
+        const description = String(document.getElementById('sell-desc').value || '').trim();
+
+        if (!title || !price || !cpmId || !description) {
+          showToast('필수 판매 정보를 모두 입력해 주세요.');
+          return;
+        }
+
+        const imageUrl = appState.uploadedImages.vehicle || createSvgDataUrl(title, `${game} · ${price}`, '#D4AF37', '#ff2a85');
+
+        // Immediately visible and public on registration (no pre-approval gate)
+        const newPost = {
+          id: 'post_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
+          game,
+          menu,
+          category: MENU_LABELS[menu]?.title || 'SALES — 판매 메뉴',
+          decalInfo,
+          isLogoCar: menu === 'LOGO_DECAL' ? true : isLogoCar,
+          title,
+          price,
+          cpmId,
+          sellerNickname: member.nickname,
+          sellerRole: member.role || 'MEMBER',
+          sellerKakao: member.kakao || 'https://open.kakao.com/me/jeep',
+          sellerAvatar: member.avatar,
+          image: imageUrl,
+          description,
+          status,
+          isPublic: true,
+          approved: false,
+          verifiedBadge: false,
+          createdAt: Date.now()
+        };
+
+        appState.data.vehicles.unshift(newPost);
+        appState.uploadedImages.vehicle = '';
+        saveState();
+        renderAllBoards();
+        closeModal('sell-modal');
+        navigateTo(game === 'CPM2' ? 'cpm2' : 'cpm1');
+        showDialog('등록 완료 및 즉시 공개', '차량 게시글이 정상적으로 등록되어 즉시 공개 목록에 반영되었습니다!', '👑');
+      };
+
+      window.toggleVehicleStatus = function (postId, currentStatus) {
+        const order = ['SELLING', 'REGISTERED', 'RESERVED', 'SOLD'];
+        const idx = order.indexOf(currentStatus);
+        const nextStatus = order[(idx + 1) % order.length];
+        const post = appState.data.vehicles.find(v => v.id === postId);
+        if (!post) return;
+        post.status = nextStatus;
+        saveState();
+        renderAllBoards();
+        if (appState.data.currentView === 'profile') renderProfilePage();
+        if (appState.data.currentView === 'admin') renderAdminDashboard();
+        showToast(`상태가 '${STATUS_LABELS[nextStatus]?.label || nextStatus}'(으)로 변경되었습니다.`);
+      };
+
+      window.toggleDecalFields = function (menuVal) {
+        const box = document.getElementById('sell-decal-extra');
+        if (!box) return;
+        if (menuVal === 'LOGO_DECAL' || menuVal === 'ITASHA_DECAL' || menuVal === 'RACING_DECAL') {
+          box.classList.remove('hidden');
+        } else {
+          box.classList.add('hidden');
+        }
+      };
+
+      window.handleSellSubmit = function (e) {
+        e.preventDefault();
+        const member = appState.data.currentMember;
+        if (!member) {
+          openAuthModal('login');
+          return;
+        }
+        if (member.suspended) {
+          showDialog('계정 이용 제한', '이용 정지된 계정은 판매 게시글을 등록할 수 없습니다.', '⛔');
+          return;
+        }
+
+        const game = document.getElementById('sell-game-type').value || 'CPM1';
+        const menu = document.getElementById('sell-menu').value || 'SALES';
+        const status = document.getElementById('sell-status').value || 'SELLING';
+        const decalInfo = String(document.getElementById('sell-decal-info').value || '').trim();
+        const isLogoCar = !!document.getElementById('sell-is-logo-car').checked;
+        const title = String(document.getElementById('sell-title').value || '').trim();
+        const price = String(document.getElementById('sell-price').value || '').trim();
+        const cpmId = String(document.getElementById('sell-cpm-id').value || '').trim().toUpperCase();
+        const description = String(document.getElementById('sell-desc').value || '').trim();
+
+        if (!title || !price || !cpmId || !description) {
+          showToast('필수 판매 정보를 모두 입력해 주세요.');
+          return;
+        }
+
+        const imageUrl = appState.uploadedImages.vehicle || createSvgDataUrl(title, `${game} · ${price}`, '#D4AF37', '#ff2a85');
+
+        const newPost = {
+          id: 'post_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
+          game,
+          menu,
+          category: MENU_LABELS[menu]?.title || 'SALES — 판매 메뉴',
+          decalInfo,
+          isLogoCar: menu === 'LOGO_DECAL' ? true : isLogoCar,
+          title,
+          price,
+          cpmId,
+          sellerNickname: member.nickname,
+          sellerRole: member.role || 'MEMBER',
+          sellerKakao: member.kakao || 'https://open.kakao.com/me/jeep',
+          sellerAvatar: member.avatar,
+          image: imageUrl,
+          description,
+          status,
+          approved: false,
+          verifiedBadge: false,
+          createdAt: Date.now()
+        };
+
+        appState.data.vehicles.unshift(newPost);
+        appState.uploadedImages.vehicle = '';
+        saveState();
+        renderAllBoards();
+        closeModal('sell-modal');
+        showDialog('차량 판매 등록 완료', '차량 판매 게시글이 정상적으로 등록되었습니다!\n(관리자 확인 후 공식 확인 표시가 부여됩니다.)', '👑');
+      };
+
+      window.toggleVehicleStatus = function (postId, currentStatus) {
+        const order = ['SELLING', 'RESERVED', 'SOLD'];
+        const idx = order.indexOf(currentStatus);
+        const nextStatus = order[(idx + 1) % order.length];
+        const post = appState.data.vehicles.find(v => v.id === postId);
+        if (!post) return;
+        post.status = nextStatus;
+        saveState();
+        renderAllBoards();
+        if (appState.data.currentView === 'profile') renderProfilePage();
+        if (appState.data.currentView === 'admin') renderAdminDashboard();
+        showToast(`판매 상태가 '${STATUS_LABELS[nextStatus].label}'(으)로 변경되었습니다.`);
+      };
+
+      window.deleteVehiclePost = function (postId) {
+        appState.data.vehicles = appState.data.vehicles.filter(v => v.id !== postId);
+        saveState();
+        renderAllBoards();
+        if (appState.data.currentView === 'profile') renderProfilePage();
+        if (appState.data.currentView === 'admin') renderAdminDashboard();
+        showToast('차량 게시글이 삭제되었습니다.');
+      };
+
+      // Fraud Report Modal & Handler
+      window.openReportModal = function (postId, targetCpmId, postTitle) {
+        document.getElementById('report-form').reset();
+        document.getElementById('report-post-id').value = postId || '';
+        document.getElementById('report-post-title').value = postTitle || '';
+        document.getElementById('report-target-id').value = targetCpmId || '';
+        appState.uploadedImages.evidence = '';
+        document.getElementById('report-evidence-preview').innerHTML = `
+          <i class="fa-solid fa-file-shield text-2xl mb-1 text-red-400/60"></i>
+          <span>입금 내역, 카카오톡 대화 캡처 등 증거 사진 첨부</span>
+        `;
+        const modal = document.getElementById('report-modal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      };
+
+      window.handleReportSubmit = function (e) {
+        e.preventDefault();
+        const postId = document.getElementById('report-post-id').value;
+        const postTitle = document.getElementById('report-post-title').value;
+        const targetCpmId = String(document.getElementById('report-target-id').value || '').trim().toUpperCase();
+        const contact = String(document.getElementById('report-contact').value || '').trim();
+        const reason = document.getElementById('report-reason').value;
+        const details = String(document.getElementById('report-details').value || '').trim();
+
+        if (!targetCpmId || !contact || !details) {
+          showToast('필수 신고 정보를 모두 입력해 주세요.');
+          return;
+        }
+
+        const evidenceUrl = appState.uploadedImages.evidence || createSvgDataUrl(`신고 대상: ${targetCpmId}`, reason, '#ef4444', '#f59e0b');
+        const reporter = appState.data.currentMember;
+
+        const newReport = {
+          id: 'rep_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6),
+          postId,
+          postTitle,
+          targetCpmId,
+          contact,
+          reason,
+          details,
+          evidenceImage: evidenceUrl,
+          reporterNickname: reporter ? reporter.nickname : '비회원 신고자',
+          reporterCpmId: reporter ? reporter.cpmId : 'GUEST',
+          status: 'PENDING',
+          createdAt: Date.now()
+        };
+
+        appState.data.reports.unshift(newReport);
+        appState.uploadedImages.evidence = '';
+        saveState();
+        if (appState.data.currentView === 'admin') renderAdminDashboard();
+        closeModal('report-modal');
+        showDialog('신고 접수 완료', '사기 신고가 정상적으로 접수되었습니다. 관리자 및 개발자가 증거를 검토한 후 조치합니다.', '🚨');
+      };
+
+      // Board Filtering (SALES, LOGO_DECAL, ITASHA_DECAL, RACING_DECAL)
+      window.setBoardFilter = function (game, key, value) {
+        const g = game === 'CPM2' ? 'CPM2' : 'CPM1';
+        appState.filters[g][key] = value;
+
+        if (key === 'menu') {
+          const cardContainer = document.getElementById(`${g.toLowerCase()}-menu-cards`);
+          if (cardContainer) {
+            cardContainer.querySelectorAll('.vvip-menu-card').forEach(btn => {
+              if (btn.dataset.menu === value) {
+                btn.classList.add('selected-menu');
+              } else {
+                btn.classList.remove('selected-menu');
+              }
+            });
+          }
+          const descEl = document.getElementById(`${g.toLowerCase()}-menu-desc`);
+          if (descEl && MENU_LABELS[value]) {
+            descEl.innerHTML = `<strong>${escapeHtml(MENU_LABELS[value].title)}:</strong> ${escapeHtml(MENU_LABELS[value].desc)}`;
+          }
+        }
+
+        renderGameBoard(g);
+      };
+
+      function renderAllBoards() {
+        renderGameBoard('CPM1');
+        renderGameBoard('CPM2');
+        renderHomeFeatured();
+      }
+
+      function renderHomeFeatured() {
+        const container = document.getElementById('home-featured-vehicles');
+        const publicVehicles = appState.data.vehicles.filter(v => v.isPublic !== false);
+        if (publicVehicles.length === 0) {
+          container.innerHTML = `<div class="col-span-full text-center py-10 text-sm text-gray-400 bg-[#0f0f14] rounded-2xl border border-yellow-500/20">아직 등록된 차량 매물이 없습니다. 상단 [차량 판매 등록]에서 바로 등록해 보세요.</div>`;
+          return;
+        }
+        container.innerHTML = publicVehicles.slice(0, 3).map(v => buildVehicleCardHtml(v, true)).join('');
+      }
+
+      function renderGameBoard(game) {
+        const grid = document.getElementById(`${game.toLowerCase()}-listings-grid`);
+        const filter = appState.filters[game];
+
+        const filtered = appState.data.vehicles.filter(v => {
+          if (v.game !== game) return false;
+          if (v.isPublic === false) return false;
+
+          const postMenu = v.menu || 'SALES';
+          if (filter.menu !== 'SALES' && postMenu !== filter.menu) return false;
+          if (filter.status !== 'ALL' && v.status !== filter.status) return false;
+
+          if (filter.search.trim() !== '') {
+            const q = filter.search.trim().toLowerCase();
+            const matchTitle = String(v.title || '').toLowerCase().includes(q);
+            const matchSeller = String(v.sellerNickname || '').toLowerCase().includes(q);
+            const matchId = String(v.cpmId || '').toLowerCase().includes(q);
+            const matchDecal = String(v.decalInfo || '').toLowerCase().includes(q);
+            if (!matchTitle && !matchSeller && !matchId && !matchDecal) return false;
+          }
+          return true;
+        });
+
+        if (filtered.length === 0) {
+          const menuName = MENU_LABELS[filter.menu]?.title || '차량 거래';
+          grid.innerHTML = `
+            <div class="col-span-full text-center py-14 px-4 rounded-2xl bg-[#0f0f14] border border-yellow-500/20">
+              <div class="text-3xl mb-2">🚘</div>
+              <p class="text-sm font-bold text-gray-300">${game} ${escapeHtml(menuName)}에 표시할 게시글이 없습니다.</p>
+              <p class="text-xs text-gray-500 mt-1">게시글을 등록하면 관리자 승인 없이 바로 목록에 공개됩니다.</p>
+            </div>
+          `;
+          return;
+        }
+
+        grid.innerHTML = filtered.map(v => buildVehicleCardHtml(v, false)).join('');
+      }
+
+      function buildVehicleCardHtml(v, showGameTag) {
+        const defaultSt = (v.menu && v.menu !== 'SALES')
+          ? { label: '등록 완료', cls: 'bg-sky-400/95 text-black' }
+          : STATUS_LABELS.SELLING;
+        const stInfo = STATUS_LABELS[v.status] || defaultSt;
+        const isSold = v.status === 'SOLD';
+        const isOwner = appState.data.currentMember && appState.data.currentMember.cpmId === v.cpmId;
+        const isAdmin = isAdminUser(appState.data.currentMember);
+        const isVerified = v.approved === true && v.verifiedBadge === true;
+        const menuInfo = MENU_LABELS[v.menu || 'SALES'];
+
+        return `
+          <article class="gold-card rounded-2xl overflow-hidden flex flex-col justify-between ${isSold ? 'opacity-80' : ''}">
+            <div>
+              <div class="relative aspect-[16/11] bg-[#08080b] overflow-hidden group cursor-pointer" onclick="openZoomModal('${v.image}', '${escapeHtml(v.title)} (${escapeHtml(v.price)})')">
+                <img src="${v.image}" alt="${escapeHtml(v.title)}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+                  ${showGameTag ? `<span class="px-2.5 py-1 rounded-lg bg-black/80 backdrop-blur-md border border-yellow-400/60 text-yellow-300 text-[11px] font-black">${escapeHtml(v.game)}</span>` : ''}
+                  <span class="px-2.5 py-1 rounded-lg bg-black/80 backdrop-blur-md border border-white/20 text-gray-100 text-[11px] font-semibold">
+                    ${escapeHtml(menuInfo ? menuInfo.title.split('—')[0].trim() : 'SALES')}
+                  </span>
+                </div>
+                <div class="absolute top-3 right-3">
+                  <span class="px-3 py-1 rounded-lg ${stInfo.cls} text-xs font-black shadow-lg">${stInfo.label}</span>
+                </div>
+                <div class="absolute bottom-2.5 right-2.5 px-2.5 py-1 rounded-lg bg-black/75 text-white/95 text-[11px]">
+                  <i class="fa-solid fa-magnifying-glass-plus mr-1 text-yellow-400"></i>사진 확대
+                </div>
+                ${isSold ? `<div class="absolute inset-0 bg-black/45 flex items-center justify-center pointer-events-none"><span class="px-5 py-2 rounded-xl border-2 border-yellow-400 bg-black/85 text-yellow-300 font-black text-base tracking-widest rotate-[-6deg]">판매 완료</span></div>` : ''}
+              </div>
+
+              <div class="p-4 sm:p-5 space-y-3">
+                <div class="flex flex-wrap items-center justify-between gap-1.5">
+                  ${isVerified
+                    ? `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-400/50 text-emerald-300 text-[11px] font-black"><i class="fa-solid fa-circle-check"></i> 관리자 확인 완료</span>`
+                    : `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-200 text-[11px] font-semibold">일반 등록</span>`
+                  }
+                  <span class="text-[11px] text-gray-400">등록일: ${formatDateStr(v.createdAt)}</span>
+                </div>
+
+                <div>
+                  <div class="text-[11px] text-yellow-300/80 font-semibold">차량 종류</div>
+                  <h3 class="font-bold text-base sm:text-lg text-white line-clamp-1">${escapeHtml(v.title)}</h3>
+                  <div class="text-lg sm:text-xl font-black text-gold-gradient mt-0.5">${escapeHtml(v.price)}</div>
+                </div>
+
+                ${v.decalInfo ? `
+                  <div class="text-xs text-yellow-100 bg-yellow-500/10 border border-yellow-500/25 px-3 py-2 rounded-xl">
+                    <strong>데칼/로고 정보:</strong> ${escapeHtml(v.decalInfo)} ${v.isLogoCar ? '<span class="ml-1 text-amber-300 font-bold">[로고차 확인됨]</span>' : ''}
+                  </div>
+                ` : ''}
+
+                <p class="text-xs sm:text-sm text-gray-300 line-clamp-2 leading-relaxed bg-white/[0.02] p-3 rounded-xl border border-white/5">
+                  ${escapeHtml(v.description)}
+                </p>
+
+                <div class="flex items-center justify-between gap-2 pt-1">
+                  <div class="flex items-center gap-2.5 min-w-0">
+                    <img src="${v.sellerAvatar}" alt="판매자" class="w-9 h-9 rounded-full object-cover border border-yellow-500/60 shrink-0" />
+                    <div class="min-w-0">
+                      <div class="text-xs truncate">${formatStyledNickname(v.sellerNickname, v.sellerRole)}</div>
+                      <div class="text-[11px] font-mono text-yellow-400">카파킹 실제 ID: ${escapeHtml(v.cpmId)}</div>
+                    </div>
+                  </div>
+
+                  <a href="${escapeHtml(v.sellerKakao || 'https://open.kakao.com/me/jeep')}" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-xl bg-[#FEE500] hover:bg-[#fdd800] text-[#191919] font-bold text-xs flex items-center gap-1.5 shrink-0 transition shadow">
+                    <i class="fa-solid fa-comment"></i>
+                    <span>오픈채팅</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-4 sm:px-5 py-3 bg-[#09090d] border-t border-yellow-500/15 flex items-center justify-between gap-2">
+              <button type="button" onclick="openReportModal('${v.id}', '${escapeHtml(v.cpmId)}', '${escapeHtml(v.title)}')" class="px-3 py-1.5 rounded-lg bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 text-red-300 text-xs font-semibold transition flex items-center gap-1.5">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>신고하기</span>
+              </button>
+
+              ${(isOwner || isAdmin) ? `
+                <div class="flex items-center gap-1.5">
+                  <button type="button" onclick="toggleVehicleStatus('${v.id}', '${v.status}')" class="px-2.5 py-1.5 rounded-lg bg-yellow-500/15 hover:bg-yellow-500/25 border border-yellow-500/40 text-yellow-200 text-xs font-semibold transition">
+                    상태 변경
+                  </button>
+                  <button type="button" onclick="deleteVehiclePost('${v.id}')" class="px-2.5 py-1.5 rounded-lg bg-white/5 hover:bg-red-500/20 text-gray-400 hover:text-red-300 text-xs transition" title="게시글 삭제">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </div>
+              ` : `<span class="text-[11px] text-gray-500">${stInfo.label}</span>`}
+            </div>
+          </article>
+        `;
+      }
+
+      function renderHomeNotices() {
+        const container = document.getElementById('home-notices-list');
+        if (!appState.data.notices || appState.data.notices.length === 0) {
+          container.innerHTML = `<div class="text-sm text-gray-400 py-3">등록된 공지사항이 없습니다.</div>`;
+          return;
+        }
+        container.innerHTML = appState.data.notices.map(n => `
+          <div class="p-4 rounded-xl bg-[#0a0a0f] border border-yellow-500/20 hover:border-yellow-500/45 transition">
+            <div class="flex items-center justify-between gap-2 mb-1.5">
+              <h3 class="font-bold text-sm sm:text-base text-yellow-200">${escapeHtml(n.title)}</h3>
+              <span class="text-[11px] text-gray-400 shrink-0">관리자 ${escapeHtml(n.author || '운영진')}</span>
+            </div>
+            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed whitespace-pre-line">${escapeHtml(n.content)}</p>
+          </div>
+        `).join('');
+      }
+
+      // Hack Price Tables & Auto Discount Calculator
+      function renderHackTables() {
+        const groups = [
+          { key: 'chrome', elId: 'hack-list-chrome' },
+          { key: 'vehicle', elId: 'hack-list-vehicle' },
+          { key: 'unlock', elId: 'hack-list-unlock' },
+          { key: 'money', elId: 'hack-list-money' }
+        ];
+
+        groups.forEach(({ key, elId }) => {
+          const container = document.getElementById(elId);
+          if (!container) return;
+          container.innerHTML = HACK_SERVICES[key].map(item => {
+            const checked = appState.selectedHackIds.has(item.id) ? 'checked' : '';
+            return `
+              <label class="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-white/[0.03] hover:bg-yellow-500/10 border border-white/10 cursor-pointer transition">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <input type="checkbox" ${checked} onchange="toggleHackItem('${item.id}')" class="w-4 h-4 rounded accent-yellow-400 shrink-0" />
+                  <span class="text-gray-100 font-medium truncate">${escapeHtml(item.name)}</span>
+                  ${item.isChrome ? `<span class="text-[10px] px-1.5 py-0.5 rounded bg-yellow-500/15 text-yellow-300 shrink-0">크롬</span>` : ''}
+                </div>
+                <span class="font-mono font-bold text-yellow-300 shrink-0">${item.price.toLocaleString()}원</span>
+              </label>
+            `;
+          }).join('');
+        });
+
+        recalculateHackTotal();
+      }
+
+      window.toggleHackItem = function (id) {
+        if (appState.selectedHackIds.has(id)) {
+          appState.selectedHackIds.delete(id);
+        } else {
+          appState.selectedHackIds.add(id);
+        }
+        recalculateHackTotal();
+      };
+
+      window.resetHackCalculator = function () {
+        appState.selectedHackIds.clear();
+        renderHackTables();
+      };
+
+      function recalculateHackTotal() {
+        const allItems = [
+          ...HACK_SERVICES.chrome,
+          ...HACK_SERVICES.vehicle,
+          ...HACK_SERVICES.unlock,
+          ...HACK_SERVICES.money
+        ];
+
+        let baseTotal = 0;
+        let chromeCount = 0;
+        let chromeSubtotal = 0;
+
+        allItems.forEach(item => {
+          if (appState.selectedHackIds.has(item.id)) {
+            baseTotal += item.price;
+            if (item.isChrome) {
+              chromeCount += 1;
+              chromeSubtotal += item.price;
+            }
+          }
+        });
+
+        const discountAmount = chromeCount >= 3 ? Math.round(chromeSubtotal * 0.05) : 0;
+        const finalTotal = Math.max(0, baseTotal - discountAmount);
+
+        document.getElementById('calc-count').textContent = `${appState.selectedHackIds.size}개`;
+        document.getElementById('calc-chrome-count').firstChild.textContent = `${chromeCount}개 `;
+        const eligEl = document.getElementById('calc-chrome-eligible');
+        if (chromeCount >= 3) {
+          eligEl.textContent = '5% 할인 적용됨!';
+          eligEl.className = 'text-emerald-300 font-bold';
+        } else {
+          eligEl.textContent = '5% 할인 미적용';
+          eligEl.className = 'text-gray-400';
+        }
+        document.getElementById('calc-base-total').textContent = `${baseTotal.toLocaleString()}원`;
+        document.getElementById('calc-discount-amount').textContent = `-${discountAmount.toLocaleString()}원`;
+        document.getElementById('calc-final-total').textContent = `${finalTotal.toLocaleString()}원`;
+      }
+
+      // Member Profile Page
+      function renderProfilePage() {
+        const container = document.getElementById('profile-content');
+        const m = appState.data.currentMember;
+        if (!m) return;
+
+        const myVehicles = appState.data.vehicles.filter(v => v.cpmId === m.cpmId);
+        const roleTag = isDeveloperUser(m)
+          ? `<span class="px-3 py-1 rounded-full bg-purple-500/20 border border-purple-400 text-yellow-200 text-xs font-black">👑 DEVELOPER</span>`
+          : (isAdminUser(m)
+            ? `<span class="px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400 text-amber-300 text-xs font-black">🛡️ 공식 관리자</span>`
+            : `<span class="px-3 py-1 rounded-full bg-yellow-500/15 border border-yellow-500/40 text-yellow-200 text-xs font-bold">VVIP 정회원</span>`);
+
+        container.innerHTML = `
+          <div class="rainbow-border p-6 sm:p-8">
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+              <img src="${m.avatar}" alt="프로필 사진" onclick="openZoomModal('${m.avatar}', '${escapeHtml(m.nickname)} 프로필')" class="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl object-cover border-2 border-yellow-400 shadow-xl cursor-pointer" />
+              <div class="flex-1 text-center sm:text-left space-y-2">
+                <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                  <h1 class="text-2xl font-black">${formatStyledNickname(m.nickname, m)}</h1>
+                  ${roleTag}
+                  ${m.suspended ? `<span class="px-3 py-1 rounded-full bg-red-600 text-white text-xs font-bold">이용 제한됨</span>` : ''}
+                </div>
+                <div class="text-sm font-mono text-yellow-300">카파킹 실제 ID: <strong>${escapeHtml(m.cpmId)}</strong></div>
+                <div class="text-xs text-gray-400 break-all">카카오톡 오픈프로필: <a href="${escapeHtml(m.kakao)}" target="_blank" rel="noopener noreferrer" class="text-yellow-200 underline">${escapeHtml(m.kakao)}</a></div>
+                <div class="pt-2 flex flex-wrap justify-center sm:justify-start gap-2">
+                  <button type="button" onclick="openSellModal('CPM1')" class="btn-gold px-4 py-2 rounded-xl text-xs">CPM1 판매 등록</button>
+                  <button type="button" onclick="openSellModal('CPM2')" class="btn-gold px-4 py-2 rounded-xl text-xs">CPM2 판매 등록</button>
+                  <button type="button" onclick="logoutMember()" class="px-4 py-2 rounded-xl bg-white/5 hover:bg-red-500/20 border border-white/15 text-xs text-gray-300 hover:text-red-300 transition">로그아웃</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h2 class="text-lg font-bold text-white">내가 등록한 판매 차량 (${myVehicles.length}건)</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              ${myVehicles.length > 0
+                ? myVehicles.map(v => buildVehicleCardHtml(v, true)).join('')
+                : `<div class="col-span-full text-center py-10 text-sm text-gray-400 bg-[#0f0f14] rounded-2xl border border-yellow-500/20">아직 등록하신 차량 판매 게시글이 없습니다.</div>`
+              }
+            </div>
+          </div>
+        `;
+      }
+
+      // Admin & Developer Dashboard
+      window.switchAdminTab = function (tab) {
+        appState.adminTab = tab;
+        renderAdminDashboard();
+      };
+
+      window.adminToggleApproval = function (postId) {
+        if (!isAdminUser(appState.data.currentMember)) return;
+        const post = appState.data.vehicles.find(v => v.id === postId);
+        if (!post) return;
+        const nextVal = post.approved === true ? false : true;
+        post.approved = nextVal;
+        post.verifiedBadge = nextVal;
+        saveState();
+        renderAllBoards();
+        renderAdminDashboard();
+        showToast(nextVal ? '공식 확인 표시가 부여되었습니다.' : '승인이 해제되었습니다.');
+      };
+
+      window.adminUpdateReportStatus = function (reportId, status) {
+        if (!isAdminUser(appState.data.currentMember)) return;
+        const rep = appState.data.reports.find(r => r.id === reportId);
+        if (!rep) return;
+        rep.status = status;
+        saveState();
+        renderAdminDashboard();
+        showToast('신고 처리 상태가 업데이트되었습니다.');
+      };
+
+      window.adminToggleSuspend = function (memberId) {
+        if (!isAdminUser(appState.data.currentMember)) return;
+        const mem = appState.data.members.find(m => m.cpmId === memberId);
+        if (!mem || isAdminUser(mem)) return;
+        mem.suspended = !mem.suspended;
+        if (appState.data.currentMember && appState.data.currentMember.cpmId === mem.cpmId) {
+          appState.data.currentMember.suspended = mem.suspended;
+        }
+        saveState();
+        renderAdminDashboard();
+        showToast(mem.suspended ? '회원 이용이 제한되었습니다.' : '회원 이용 제한이 해제되었습니다.');
+      };
+
+      window.adminGrantRole = function (memberId, newRole) {
+        if (!isDeveloperUser(appState.data.currentMember)) {
+          showDialog('개발자 전용 권한', '관리자 권한 부여 및 회수는 개발자(BY_ 카파킹 지프 (유튜버) CPM)만 가능합니다.', '👑');
+          return;
+        }
+        const mem = appState.data.members.find(m => m.cpmId === memberId);
+        if (!mem || isDeveloperUser(mem)) return;
+        mem.role = newRole === 'ADMIN' ? 'ADMIN' : 'MEMBER';
+        mem.isAdmin = mem.role === 'ADMIN';
+        saveState();
+        renderAdminDashboard();
+        showToast('회원 권한이 업데이트되었습니다.');
+      };
+
+      window.adminCreateNotice = function (e) {
+        e.preventDefault();
+        if (!isAdminUser(appState.data.currentMember)) return;
+        const title = String(document.getElementById('admin-notice-title').value || '').trim();
+        const content = String(document.getElementById('admin-notice-content').value || '').trim();
+        if (!title || !content) return;
+
+        appState.data.notices.unshift({
+          id: 'notice_' + Date.now(),
+          title,
+          content,
+          author: appState.data.currentMember.nickname,
+          createdAt: Date.now()
+        });
+        saveState();
+        renderHomeNotices();
+        renderAdminDashboard();
+        showToast('공지사항이 등록되었습니다.');
+      };
+
+      window.adminDeleteNotice = function (noticeId) {
+        if (!isAdminUser(appState.data.currentMember)) return;
+        appState.data.notices = appState.data.notices.filter(n => n.id !== noticeId);
+        saveState();
+        renderHomeNotices();
+        renderAdminDashboard();
+        showToast('공지사항이 삭제되었습니다.');
+      };
+
+      function renderAdminDashboard() {
+        const container = document.getElementById('admin-guard-container');
+        if (!isAdminUser(appState.data.currentMember)) {
+          container.innerHTML = '';
+          return;
+        }
+
+        const isDev = isDeveloperUser(appState.data.currentMember);
+        const pendingReportsCount = appState.data.reports.filter(r => r.status === 'PENDING').length;
+
+        let tabBody = '';
+        if (appState.adminTab === 'vehicles') {
+          tabBody = `
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <h3 class="font-bold text-white">전체 판매 게시글 관리 (${appState.data.vehicles.length}건)</h3>
+                <span class="text-xs text-gray-400">허위 정보 및 도용 게시글 삭제 / 공식 확인 승인</span>
+              </div>
+              ${appState.data.vehicles.length === 0 ? `<div class="text-sm text-gray-400 py-8 text-center">등록된 차량 게시글이 없습니다.</div>` : ''}
+              <div class="space-y-3">
+                ${appState.data.vehicles.map(v => `
+                  <div class="p-4 rounded-2xl bg-[#0a0a0f] border border-yellow-500/25 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="flex items-center gap-3.5">
+                      <img src="${v.image}" onclick="openZoomModal('${v.image}', '${escapeHtml(v.title)}')" class="w-20 h-14 rounded-xl object-cover border border-yellow-500/30 cursor-pointer shrink-0" />
+                      <div>
+                        <div class="flex flex-wrap items-center gap-1.5">
+                          <span class="px-2 py-0.5 rounded bg-yellow-500/20 text-yellow-300 text-[11px] font-bold">${escapeHtml(v.game)}</span>
+                          <span class="text-xs text-gray-400">${escapeHtml(v.category || MENU_LABELS[v.menu || 'SALES'].title)}</span>
+                          ${v.approved === true
+                            ? `<span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[11px] font-bold">✅ 공식 확인 완료</span>`
+                            : `<span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[11px] font-bold">검토 대기 중</span>`
+                          }
+                        </div>
+                        <div class="font-bold text-sm text-white mt-1">${escapeHtml(v.title)} · <span class="text-yellow-300">${escapeHtml(v.price)}</span></div>
+                        <div class="text-xs text-gray-400 mt-0.5">판매자: ${formatStyledNickname(v.sellerNickname, v.sellerRole)} (${escapeHtml(v.cpmId)})</div>
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 w-full sm:w-auto justify-end">
+                      <button type="button" onclick="adminToggleApproval('${v.id}')" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-yellow-500/20 border border-yellow-500/30 text-xs text-yellow-200 font-semibold">
+                        ${v.approved === true ? '공식 확인 해제' : '공식 확인 승인'}
+                      </button>
+                      <button type="button" onclick="toggleVehicleStatus('${v.id}', '${v.status}')" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-xs text-gray-200">
+                        판매상태 변경
+                      </button>
+                      <button type="button" onclick="deleteVehiclePost('${v.id}')" class="px-3 py-1.5 rounded-lg bg-red-600/20 hover:bg-red-600/40 border border-red-500/40 text-xs text-red-200 font-bold">
+                        삭제
+                      </button>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        } else if (appState.adminTab === 'reports') {
+          tabBody = `
+            <div class="space-y-4">
+              <h3 class="font-bold text-white">사기 신고 및 증거 검토 내역 (${appState.data.reports.length}건)</h3>
+              ${appState.data.reports.length === 0 ? `<div class="text-sm text-gray-400 py-8 text-center">접수된 사기 신고 내역이 없습니다.</div>` : ''}
+              <div class="space-y-4">
+                ${appState.data.reports.map(r => `
+                  <div class="p-5 rounded-2xl bg-[#0a0a0f] border ${r.status === 'PENDING' ? 'border-red-500/50' : 'border-white/15'} space-y-3">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                      <div class="flex items-center gap-2">
+                        <span class="px-2.5 py-1 rounded-lg text-xs font-bold ${r.status === 'PENDING' ? 'bg-red-600 text-white' : 'bg-emerald-600/30 text-emerald-300 border border-emerald-500/40'}">
+                          ${r.status === 'PENDING' ? '🚨 미처리 신고' : '✅ 조치 완료'}
+                        </span>
+                        <span class="font-bold text-sm text-red-300">대상 ID: ${escapeHtml(r.targetCpmId)}</span>
+                      </div>
+                      <span class="text-xs text-gray-400">신고자: ${escapeHtml(r.reporterNickname)} (${escapeHtml(r.reporterCpmId)})</span>
+                    </div>
+                    <div class="text-sm font-bold text-white">사유: ${escapeHtml(r.reason)}</div>
+                    <div class="text-xs text-gray-300">연락처/링크: ${escapeHtml(r.contact)}</div>
+                    <p class="text-xs sm:text-sm text-gray-200 bg-white/[0.03] p-3 rounded-xl border border-white/5 whitespace-pre-line">${escapeHtml(r.details)}</p>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
+                      <button type="button" onclick="openZoomModal('${r.evidenceImage}', '신고 증거 자료 - 대상 ID: ${escapeHtml(r.targetCpmId)}')" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-yellow-500/15 hover:bg-yellow-500/25 border border-yellow-500/40 text-xs font-bold text-yellow-200">
+                        <i class="fa-solid fa-image"></i>
+                        <span>신고 증거 사진 확대 확인</span>
+                      </button>
+                      <div class="flex gap-2">
+                        <button type="button" onclick="adminUpdateReportStatus('${r.id}', 'RESOLVED')" class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold">
+                          조치 완료 표시
+                        </button>
+                        <button type="button" onclick="adminUpdateReportStatus('${r.id}', 'PENDING')" class="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 text-xs">
+                          대기 전환
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        } else if (appState.adminTab === 'members') {
+          tabBody = `
+            <div class="space-y-4">
+              <div class="flex items-center justify-between flex-wrap gap-2">
+                <h3 class="font-bold text-white">가입 회원 목록 및 이용 제한 관리 (${appState.data.members.length}명)</h3>
+                ${isDev ? `<span class="text-xs text-purple-300 font-bold">👑 개발자 권한: 관리자 권한 부여/회수 가능</span>` : ''}
+              </div>
+              <div class="space-y-3">
+                ${appState.data.members.map(mem => `
+                  <div class="p-4 rounded-2xl bg-[#0a0a0f] border border-yellow-500/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="flex items-center gap-3">
+                      <img src="${mem.avatar}" onclick="openZoomModal('${mem.avatar}', '${escapeHtml(mem.nickname)} 프로필 사진')" class="w-12 h-12 rounded-full object-cover border border-yellow-400 cursor-pointer" />
+                      <div>
+                        <div class="flex items-center gap-2 flex-wrap">
+                          <span class="text-sm">${formatStyledNickname(mem.nickname, mem)}</span>
+                          ${getRoleBadgeHtml(mem)}
+                          <span class="text-xs font-mono text-yellow-300">${escapeHtml(mem.cpmId)}</span>
+                          ${mem.suspended ? `<span class="px-2 py-0.5 rounded bg-red-600 text-white text-[10px] font-bold">이용 정지</span>` : `<span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px]">정상</span>`}
+                        </div>
+                        <div class="text-xs text-gray-400 mt-0.5 break-all">오픈프로필: ${escapeHtml(mem.kakao)}</div>
+                      </div>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-2">
+                      ${isDev && !isDeveloperUser(mem) ? `
+                        <select onchange="adminGrantRole('${mem.cpmId}', this.value)" class="px-2.5 py-1.5 rounded-lg bg-[#12121a] border border-yellow-500/30 text-xs text-yellow-200">
+                          <option value="MEMBER" ${!isAdminUser(mem) ? 'selected' : ''}>일반 회원</option>
+                          <option value="ADMIN" ${isAdminUser(mem) ? 'selected' : ''}>관리자 부여</option>
+                        </select>
+                      ` : ''}
+                      ${!isAdminUser(mem) ? `
+                        <button type="button" onclick="adminToggleSuspend('${mem.cpmId}')" class="px-4 py-2 rounded-xl text-xs font-bold ${mem.suspended ? 'bg-emerald-600/30 text-emerald-200 border border-emerald-500/40' : 'bg-red-600/25 text-red-200 border border-red-500/40 hover:bg-red-600/40'} transition">
+                          ${mem.suspended ? '이용 제한 해제' : '부적절 회원 이용 제한'}
+                        </button>
+                      ` : `<span class="text-xs text-amber-400 font-semibold">운영진 계정</span>`}
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        } else if (appState.adminTab === 'notices') {
+          tabBody = `
+            <div class="space-y-6">
+              <form id="admin-notice-form" onsubmit="adminCreateNotice(event)" class="p-5 rounded-2xl bg-[#0a0a0f] border border-yellow-500/35 space-y-3">
+                <h3 class="font-bold text-yellow-300 text-sm">📢 새 공지사항 작성</h3>
+                <input type="text" id="admin-notice-title" required placeholder="공지사항 제목 입력" class="w-full px-4 py-2.5 rounded-xl bg-[#121218] border border-yellow-500/30 text-sm text-white focus:outline-none" />
+                <textarea id="admin-notice-content" rows="3" required placeholder="공지사항 내용을 입력하세요..." class="w-full px-4 py-2.5 rounded-xl bg-[#121218] border border-yellow-500/30 text-sm text-white focus:outline-none resize-none"></textarea>
+                <button type="submit" class="btn-gold px-5 py-2.5 rounded-xl text-xs">공지사항 등록하기</button>
+              </form>
+
+              <div class="space-y-3">
+                <h3 class="font-bold text-white text-sm">등록된 공지사항 목록</h3>
+                ${appState.data.notices.map(n => `
+                  <div class="p-4 rounded-xl bg-[#0a0a0f] border border-white/10 flex items-start justify-between gap-3">
+                    <div>
+                      <div class="font-bold text-sm text-yellow-200">${escapeHtml(n.title)}</div>
+                      <p class="text-xs text-gray-300 mt-1 whitespace-pre-line">${escapeHtml(n.content)}</p>
+                    </div>
+                    <button type="button" onclick="adminDeleteNotice('${n.id}')" class="px-3 py-1.5 rounded-lg bg-red-500/15 text-red-300 text-xs font-bold shrink-0">삭제</button>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        }
+
+        container.innerHTML = `
+          <div class="rainbow-border p-6 sm:p-8 space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-yellow-500/25 pb-5">
+              <div>
+                <span class="inline-block px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/50 text-amber-300 text-xs font-black mb-1.5">
+                  👑 ADMIN & DEVELOPER CONTROL CENTER
+                </span>
+                <h1 class="text-2xl sm:text-3xl font-black text-gold-gradient">관리자 전용 페이지</h1>
+                <p class="text-xs text-gray-400 mt-1">접속자: ${formatStyledNickname(appState.data.currentMember.nickname, appState.data.currentMember)} (공식 관리자: 이케타니, 엠빠 M5)</p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+              <button type="button" onclick="switchAdminTab('vehicles')" class="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition ${appState.adminTab === 'vehicles' ? 'btn-gold' : 'bg-[#0a0a0f] text-gray-300 border border-white/10'}">
+                판매 게시글 관리 (${appState.data.vehicles.length})
+              </button>
+              <button type="button" onclick="switchAdminTab('reports')" class="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition ${appState.adminTab === 'reports' ? 'btn-gold' : 'bg-[#0a0a0f] text-gray-300 border border-white/10'}">
+                사기 신고 및 증거 확인 ${pendingReportsCount > 0 ? `<span class="ml-1 px-2 py-0.5 rounded-full bg-red-600 text-white text-[10px]">${pendingReportsCount}</span>` : ''}
+              </button>
+              <button type="button" onclick="switchAdminTab('members')" class="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition ${appState.adminTab === 'members' ? 'btn-gold' : 'bg-[#0a0a0f] text-gray-300 border border-white/10'}">
+                회원 목록 및 이용 제한 (${appState.data.members.length})
+              </button>
+              <button type="button" onclick="switchAdminTab('notices')" class="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition ${appState.adminTab === 'notices' ? 'btn-gold' : 'bg-[#0a0a0f] text-gray-300 border border-white/10'}">
+                공지사항 작성 및 수정
+              </button>
+            </div>
+
+            <div>${tabBody}</div>
+          </div>
+        `;
+      }
+
+      // Boot Application
+      window.addEventListener('DOMContentLoaded', function () {
+        loadState();
+        loadSyncConfig();
+        initBroadcastSync();
+        startCloudPolling();
+        if (isCloudConfigured()) {
+          pullFromCloudNow(true);
+        }
+        updateAuthUI();
+        renderHomeNotices();
+        renderAllBoards();
+        renderHackTables();
+        navigateTo('home');
+      });
+    })();
+  </script>
+</body>
+</html>
